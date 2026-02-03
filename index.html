@@ -310,32 +310,10 @@
             box-shadow: var(--shadow-lg);
             background: linear-gradient(135deg, var(--light-gray) 0%, var(--border-color) 100%);
             transition: var(--transition);
-            background-color: #f0f0f0;
         }
 
         .profile-img:hover {
             transform: scale(1.02);
-        }
-
-        .profile-img-placeholder {
-            width: 360px;
-            height: 360px;
-            border-radius: var(--border-radius-lg);
-            border: 1px solid var(--border-color);
-            box-shadow: var(--shadow-lg);
-            background: linear-gradient(135deg, var(--light-gray) 0%, var(--border-color) 100%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-light);
-            font-size: 1.1rem;
-        }
-
-        .profile-img-placeholder i {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
         }
 
         /* Section Styling */
@@ -781,12 +759,6 @@
             .hero-stats {
                 justify-content: center;
             }
-
-            .profile-img, .profile-img-placeholder {
-                width: 320px;
-                height: 320px;
-                margin: 0 auto;
-            }
         }
 
         @media (max-width: 768px) {
@@ -848,9 +820,9 @@
                 padding: 2rem;
             }
 
-            .profile-img, .profile-img-placeholder {
-                width: 280px;
-                height: 280px;
+            .profile-img {
+                width: 300px;
+                height: 300px;
             }
         }
 
@@ -880,33 +852,13 @@
                 text-align: center;
             }
 
-            .profile-img, .profile-img-placeholder {
-                width: 240px;
-                height: 240px;
+            .profile-img {
+                width: 260px;
+                height: 260px;
             }
 
             .experience-item {
                 padding: 1.5rem;
-            }
-        }
-
-        @media (max-width: 360px) {
-            .profile-img, .profile-img-placeholder {
-                width: 200px;
-                height: 200px;
-            }
-        }
-
-        /* Fix for dark mode toggle on mobile */
-        @media (hover: none) and (pointer: coarse) {
-            .theme-toggle:hover {
-                transform: none;
-                background-color: var(--light-gray);
-            }
-            
-            .theme-toggle:active {
-                background-color: var(--border-color);
-                transform: scale(0.95);
             }
         }
     </style>
@@ -929,11 +881,11 @@
                     <li><a href="#message">Message</a></li>
                 </ul>
                 
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <button class="theme-toggle" id="themeToggle">
                     <i class="fas fa-moon"></i>
                 </button>
                 
-                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -952,17 +904,18 @@
                     Proven track record of exceeding revenue goals and building strong client relationships. 
                     Skilled in prospecting and lead generation, market analysis, and collaborating with different lines of business.
                 </p>
-                <div class="hero-btns">
-                    <a href="#contact" class="btn btn-primary">
-                        <i class="fas fa-paper-plane"></i> Contact Me
-                    </a>
-                    <a href="#experience" class="btn btn-secondary">
-                        <i class="fas fa-file-alt"></i> View Experience
-                    </a>
-                    <a href="https://drive.google.com/uc?export=download&id=1bTle4Ia1N4einoBjpSPhnnIOPNQxagG6" download class="btn btn-secondary">
-                        <i class="fas fa-download"></i> Download CV
-                    </a>
-                </div>
+               <div class="hero-btns">
+    <a href="#contact" class="btn btn-primary">
+        <i class="fas fa-paper-plane"></i> Contact Me
+    </a>
+    <a href="#experience" class="btn btn-secondary">
+        <i class="fas fa-file-alt"></i> View Experience
+    </a>
+    <!-- Download CV Button -->
+    <a href="https://drive.google.com/uc?export=download&id=1bTle4Ia1N4einoBjpSPhnnIOPNQxagG6" download class="btn btn-secondary">
+        <i class="fas fa-download"></i> Download CV
+    </a>
+</div>
                 <div class="hero-stats">
                     <div class="stat">
                         <div class="stat-number">15+ Years</div>
@@ -978,18 +931,12 @@
                     </div>
                 </div>
             </div>
-            <div class="hero-image">
-                <!-- Profile Image with Fallback -->
-                <img src="https://i.postimg.cc/RZyJfzZz/Sami-Abdoun.jpg" 
-                     alt="Sami Abdoun" 
-                     class="profile-img"
-                     onerror="this.style.display='none'; document.getElementById('profilePlaceholder').style.display='flex';">
-                <div id="profilePlaceholder" class="profile-img-placeholder" style="display: none;">
-                    <i class="fas fa-user-tie"></i>
-                    <span>Sami Abdoun</span>
-                    <span style="font-size: 0.9rem; margin-top: 0.5rem;">Business Development Professional</span>
-                </div>
-            </div>
+          <div class="hero-image">
+    <!-- Your Photo - Working URL -->
+    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" 
+         alt="Sami Abdoun" 
+         class="profile-img">
+</div>
         </div>
     </section>
 
@@ -1329,48 +1276,46 @@
     </footer>
 
     <script>
-        // Dark Mode Toggle - Fixed for mobile
+        // Dark Mode Toggle
         const themeToggle = document.getElementById('themeToggle');
-        const themeIcon = themeToggle.querySelector('i');
         const body = document.body;
         
         // Check for saved theme preference
         const savedTheme = localStorage.getItem('theme') || 'light';
         if (savedTheme === 'dark') {
             body.classList.add('dark-mode');
-            themeIcon.className = 'fas fa-sun';
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
         }
         
         themeToggle.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
             
-            // Update icon properly
+            // Update icon
             if (body.classList.contains('dark-mode')) {
-                themeIcon.className = 'fas fa-sun';
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
                 localStorage.setItem('theme', 'dark');
             } else {
-                themeIcon.className = 'fas fa-moon';
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
                 localStorage.setItem('theme', 'light');
             }
         });
         
         // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenuIcon = mobileMenuBtn.querySelector('i');
         const navLinks = document.getElementById('navLinks');
         
         mobileMenuBtn.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-            mobileMenuIcon.className = navLinks.classList.contains('active') 
-                ? 'fas fa-times' 
-                : 'fas fa-bars';
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
         });
         
         // Close mobile menu when clicking a link
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
-                mobileMenuIcon.className = 'fas fa-bars';
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
                 
                 // Update active class
                 document.querySelectorAll('.nav-links a').forEach(item => {
@@ -1453,38 +1398,35 @@
             
             // Form will submit to Formspree
             // Formspree will redirect back with ?success=true parameter
-            
-            // Reset button after 5 seconds in case of error
-            setTimeout(() => {
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-            }, 5000);
         });
-        
-        // Image fallback handler
+
+        // Check if CV file exists
         document.addEventListener('DOMContentLoaded', function() {
-            const profileImg = document.querySelector('.profile-img');
-            const placeholder = document.getElementById('profilePlaceholder');
-            
-            // Check if image loads, if not show placeholder
-            if (profileImg.complete && profileImg.naturalHeight === 0) {
-                profileImg.style.display = 'none';
-                placeholder.style.display = 'flex';
+            const cvLink = document.querySelector('a[href*="Sami_Abdoun_CV.pdf"]');
+            if (cvLink) {
+                // Test if the file exists
+                fetch('Sami_Abdoun_CV.pdf', { method: 'HEAD' })
+                    .then(response => {
+                        if (!response.ok) {
+                            // File doesn't exist or can't be accessed
+                            cvLink.addEventListener('click', function(e) {
+                                e.preventDefault();
+                                alert('CV file not found or cannot be accessed. Please ensure the PDF file named "Sami_Abdoun_CV.pdf" is in the same folder as this HTML file.');
+                            });
+                        } else {
+                            // File exists, remove any error handlers
+                            console.log('CV file found and ready for download');
+                        }
+                    })
+                    .catch(error => {
+                        // Network error or file not found
+                        cvLink.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            alert('Unable to access CV file. Please ensure the PDF file named "Sami_Abdoun_CV.pdf" is in the same folder as this HTML file.');
+                        });
+                    });
             }
         });
-        
-        // Fix for mobile touch interactions
-        document.addEventListener('touchstart', function() {}, {passive: true});
-        
-        // Prevent zoom on double-tap for mobile
-        let lastTouchEnd = 0;
-        document.addEventListener('touchend', function(event) {
-            const now = (new Date()).getTime();
-            if (now - lastTouchEnd <= 300) {
-                event.preventDefault();
-            }
-            lastTouchEnd = now;
-        }, false);
     </script>
 </body>
 </html>
