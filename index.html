@@ -861,6 +861,61 @@
                 padding: 1.5rem;
             }
         }
+        @media (max-width: 360px) {
+            .profile-img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .experience-item {
+                padding: 1.5rem;
+            }
+        }
+
+        /* ===== MOBILE-ONLY IMAGE REPLACEMENT ===== */
+        /* This only affects mobile devices, PC remains unchanged */
+
+        @media (max-width: 768px) {
+            /* Hide the original image on mobile */
+            .hero-image img.profile-img {
+                display: none !important;
+            }
+            
+            /* Create a new image container for mobile */
+            .hero-image::after {
+                content: '';
+                display: block;
+                width: 280px;
+                height: 280px;
+                background-image: url('https://i.postimg.cc/jdB4YjDf/sami-photo-jpg-(2).jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                border-radius: 12px;
+                border: 1px solid var(--border-color);
+                box-shadow: var(--shadow-lg);
+                margin: 0 auto;
+                background-color: var(--light-gray);
+            }
+            
+            /* Adjust for very small phones */
+            @media (max-width: 480px) {
+                .hero-image::after {
+                    width: 240px;
+                    height: 240px;
+                }
+            }
+            
+            @media (max-width: 360px) {
+                .hero-image::after {
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+        }
+
+    </style>
+</head>
     </style>
 </head>
 <body>
