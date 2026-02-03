@@ -13,21 +13,6 @@
             --accent-color: #3b82f6;
             --light-color: #ffffff;
             --dark-color: #1f2937;
-            --gray-color: #6b7280;<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sami Abdoun | Business Development Professional</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #2563eb;
-            --secondary-color: #1e40af;
-            --accent-color: #3b82f6;
-            --light-color: #ffffff;
-            --dark-color: #1f2937;
             --gray-color: #6b7280;
             --light-gray: #f3f4f6;
             --border-color: #e5e7eb;
@@ -325,1426 +310,32 @@
             box-shadow: var(--shadow-lg);
             background: linear-gradient(135deg, var(--light-gray) 0%, var(--border-color) 100%);
             transition: var(--transition);
+            background-color: #f0f0f0;
         }
 
         .profile-img:hover {
             transform: scale(1.02);
         }
 
-        /* Section Styling */
-        section {
-            padding: 100px 0;
-        }
-
-        .section-header {
-            margin-bottom: 4rem;
-        }
-
-        .section-tag {
-            display: inline-block;
-            color: var(--primary-color);
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 1rem;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-        }
-
-        .section-subtitle {
-            font-size: 1.1rem;
-            color: var(--text-light);
-            max-width: 700px;
-        }
-
-        /* Experience Section */
-        .experience-list {
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
-        }
-
-        .experience-item {
-            background-color: var(--card-bg);
-            border-radius: var(--border-radius-lg);
-            padding: 2.5rem;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border-color);
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .experience-item:hover {
-            box-shadow: var(--shadow-lg);
-            transform: translateY(-2px);
-            border-color: var(--primary-color);
-        }
-
-        .experience-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 1.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .experience-header-left {
-            flex: 1;
-        }
-
-        .experience-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .experience-company {
-            font-size: 1.1rem;
-            color: var(--primary-color);
-            font-weight: 600;
-            margin-bottom: 0.25rem;
-        }
-
-        .experience-location {
-            font-size: 0.95rem;
-            color: var(--text-light);
-        }
-
-        .experience-period {
-            background-color: var(--light-gray);
-            color: var(--text-color);
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            white-space: nowrap;
-            margin-left: 1rem;
-        }
-
-        .experience-details {
-            color: var(--text-light);
-        }
-
-        .experience-details ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .experience-details li {
-            margin-bottom: 0.75rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .experience-details li:before {
-            content: "▸";
-            position: absolute;
-            left: 0;
-            color: var(--primary-color);
-            font-weight: bold;
-        }
-
-        /* Skills Section */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-
-        .skill-category {
-            background-color: var(--card-bg);
-            border-radius: var(--border-radius-lg);
-            padding: 2rem;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border-color);
-        }
-
-        .skill-category h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid var(--border-color);
-            color: var(--text-color);
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-        }
-
-        .skill-tag {
-            background-color: var(--light-gray);
-            color: var(--text-color);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: var(--transition);
-        }
-
-        .skill-tag.highlight {
-            background-color: var(--primary-color);
-            color: white;
-        }
-
-        /* Education Section */
-        .education-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .education-item {
-            background-color: var(--card-bg);
-            border-radius: var(--border-radius-lg);
-            padding: 2rem;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border-color);
-        }
-
-        .education-item h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-color);
-        }
-
-        .education-institution {
-            color: var(--primary-color);
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .education-year {
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-
-        /* Contact Section */
-        .contact-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .contact-card {
-            background-color: var(--card-bg);
-            border-radius: var(--border-radius-lg);
-            padding: 2rem;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border-color);
-            transition: var(--transition);
-        }
-
-        .contact-card:hover {
-            box-shadow: var(--shadow-lg);
-            transform: translateY(-2px);
-            border-color: var(--primary-color);
-        }
-
-        .contact-icon {
-            width: 56px;
-            height: 56px;
-            background-color: var(--light-gray);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary-color);
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.75rem;
-            color: var(--text-color);
-        }
-
-        .contact-card p {
-            color: var(--text-light);
-            margin-bottom: 0.25rem;
-        }
-
-        .contact-card a {
-            color: var(--primary-color);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .contact-card a:hover {
-            color: var(--secondary-color);
-            text-decoration: underline;
-        }
-
-        /* Message Form Section */
-        .message-section {
-            background: linear-gradient(135deg, var(--body-bg) 0%, var(--light-gray) 100%);
-            border-top: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .form-container {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .message-form {
-            background-color: var(--card-bg);
-            border-radius: var(--border-radius-lg);
-            padding: 3rem;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border-color);
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: var(--text-color);
-            font-size: 0.95rem;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 12px 16px;
-            border: 1px solid var(--border-color);
-            border-radius: var(--border-radius);
-            background-color: var(--card-bg);
-            color: var(--text-color);
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
-            transition: var(--transition);
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-        }
-
-        .form-control::placeholder {
-            color: var(--gray-color);
-        }
-
-        textarea.form-control {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        .btn-submit {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 14px 32px;
-            border-radius: var(--border-radius);
-            font-weight: 600;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: var(--transition);
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            width: 100%;
-            justify-content: center;
-        }
-
-        .btn-submit:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .form-note {
-            text-align: center;
-            margin-top: 2rem;
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-
-        /* Success Message */
-        .success-message {
-            display: none;
-            background-color: #d1fae5;
-            border: 1px solid #10b981;
-            color: #065f46;
-            padding: 1.5rem;
-            border-radius: var(--border-radius);
-            margin-top: 2rem;
-            text-align: center;
-        }
-
-        .success-message i {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: #10b981;
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--dark-color);
-            color: white;
-            padding: 4rem 0 2rem;
-        }
-
-        .dark-mode footer {
-            background-color: #1e293b;
-        }
-
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .footer-logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: white;
-            text-decoration: none;
-        }
-
-        .footer-tagline {
-            font-size: 1.1rem;
-            max-width: 600px;
-            text-align: center;
-            opacity: 0.9;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1.5rem;
-        }
-
-        .social-link {
-            width: 44px;
-            height: 44px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.1rem;
-            transition: var(--transition);
-            text-decoration: none;
-        }
-
-        .social-link:hover {
-            background-color: var(--primary-color);
-            transform: translateY(-3px);
-        }
-
-        .copyright {
-            font-size: 0.9rem;
-            opacity: 0.7;
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-
-            .hero-text {
-                text-align: center;
-            }
-
-            .hero-btns {
-                justify-content: center;
-            }
-
-            .hero-stats {
-                justify-content: center;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .nav-links {
-                position: fixed;
-                top: 80px;
-                left: 0;
-                width: 100%;
-                background-color: var(--card-bg);
-                flex-direction: column;
-                align-items: center;
-                padding: 2rem;
-                gap: 1.5rem;
-                box-shadow: var(--shadow-lg);
-                transform: translateY(-100%);
-                opacity: 0;
-                transition: var(--transition);
-                z-index: 999;
-                border-top: 1px solid var(--border-color);
-            }
-
-            .nav-links.active {
-                transform: translateY(0);
-                opacity: 1;
-            }
-
-            .hero {
-                padding: 140px 0 80px;
-            }
-
-            .hero-title {
-                font-size: 2.5rem;
-            }
-
-            .experience-header {
-                flex-direction: column;
-                gap: 1rem;
-                align-items: flex-start;
-            }
-
-            .experience-period {
-                margin-left: 0;
-                align-self: flex-start;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            section {
-                padding: 80px 0;
-            }
-
-            .message-form {
-                padding: 2rem;
-            }
-
-            .profile-img {
-                width: 300px;
-                height: 300px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .hero-title {
-                font-size: 2rem;
-            }
-
-            .hero-btns {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .btn {
-                width: 100%;
-                max-width: 280px;
-                justify-content: center;
-            }
-
-            .hero-stats {
-                flex-direction: column;
-                gap: 1.5rem;
-                align-items: center;
-            }
-
-            .stat {
-                text-align: center;
-            }
-
-            .profile-img {
-                width: 260px;
-                height: 260px;
-            }
-
-            .experience-item {
-                padding: 1.5rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Header & Navigation -->
-    <header>
-        <div class="container nav-container">
-            <a href="#" class="logo">
-                <i class="fas fa-user-tie"></i>
-                Sami <span>Abdoun</span>
-            </a>
-            
-            <div class="nav-right">
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="#experience" class="active">Experience</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#message">Message</a></li>
-                </ul>
-                
-                <button class="theme-toggle" id="themeToggle">
-                    <i class="fas fa-moon"></i>
-                </button>
-                
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <div class="hero-tag">
-                    <i class="fas fa-briefcase"></i> B2B | SAAS | Technology
-                </div>
-                <h1 class="hero-title">Business Development Professional</h1>
-                <p class="hero-description">
-                    Proven track record of exceeding revenue goals and building strong client relationships. 
-                    Skilled in prospecting and lead generation, market analysis, and collaborating with different lines of business.
-                </p>
-               <div class="hero-btns">
-    <a href="#contact" class="btn btn-primary">
-        <i class="fas fa-paper-plane"></i> Contact Me
-    </a>
-    <a href="#experience" class="btn btn-secondary">
-        <i class="fas fa-file-alt"></i> View Experience
-    </a>
-    <!-- Download CV Button -->
-    <a href="https://drive.google.com/uc?export=download&id=1bTle4Ia1N4einoBjpSPhnnIOPNQxagG6" download class="btn btn-secondary">
-        <i class="fas fa-download"></i> Download CV
-    </a>
-</div>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <div class="stat-number">15+ Years</div>
-                        <div class="stat-label">Professional Experience</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">UAE & KSA</div>
-                        <div class="stat-label">Market Expertise</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">100%+</div>
-                        <div class="stat-label">Target Achievement</div>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-image">
-                <!-- Your Photo -->
-                <img src="https://i.postimg.cc/RZyJfzZz/Sami-Abdoun.jpg" 
-                     alt="Sami Abdoun" 
-                     class="profile-img">
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">Professional Journey</div>
-                <h2 class="section-title">Work Experience</h2>
-                <p class="section-subtitle">A consistent track record of driving business growth and building strategic partnerships</p>
-            </div>
-            
-            <div class="experience-list">
-                <!-- Experience Item 1 -->
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div class="experience-header-left">
-                            <h3 class="experience-title">Senior Business Development Executive - KSA</h3>
-                            <p class="experience-company">Mr.Alfred PMS</p>
-                            <p class="experience-location">Dubai, UAE</p>
-                        </div>
-                        <span class="experience-period">March 2025 - Present</span>
-                    </div>
-                    <div class="experience-details">
-                        <ul>
-                            <li>Collaborate with marketing teams to align campaigns, share market insights, and optimize lead generation strategies</li>
-                            <li>Identify and engage holiday home SaaS operators to generate new business opportunities by identifying gaps or upcoming projects</li>
-                            <li>Coordinate with solution engineers to deliver product demonstrations to decision-makers</li>
-                            <li>Build and manage strategic accounts to ensure strong client relationships and sustainable growth</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Experience Item 2 -->
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div class="experience-header-left">
-                            <h3 class="experience-title">Inside Sales Specialist (Education Solutions)</h3>
-                            <p class="experience-company">Trio</p>
-                            <p class="experience-location">Dubai, UAE (UAE & KSA Markets)</p>
-                        </div>
-                        <span class="experience-period">June 2023 - February 2025</span>
-                    </div>
-                    <div class="experience-details">
-                        <ul>
-                            <li>Built and maintained strong relationships with existing and potential clients in the education sector</li>
-                            <li>Researched and targeted K-12 schools requiring monitoring and MDM solutions</li>
-                            <li>Conducted strategic outreach through cold calls, emails, and LinkedIn to generate interest</li>
-                            <li>Assessed IT security needs, procurement timelines, and identified key decision-makers</li>
-                            <li>Managed sales pipeline and CRM, coordinating lead handoff to Account Executives</li>
-                            <li>Acquired and expanded partnerships with schools across Saudi Arabia and UAE</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Experience Item 3 -->
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div class="experience-header-left">
-                            <h3 class="experience-title">Business Development Representative</h3>
-                            <p class="experience-company">Archdesk</p>
-                            <p class="experience-location">Dubai, UAE (UAE & KSA Markets)</p>
-                        </div>
-                        <span class="experience-period">December 2021 - February 2023</span>
-                    </div>
-                    <div class="experience-details">
-                        <ul>
-                            <li>Prospected and engaged construction firms across Saudi Arabia to generate new business opportunities</li>
-                            <li>Identified and targeted key accounts, including contractors seeking workflow automation solutions</li>
-                            <li>Conducted outbound outreach via calls, emails, and LinkedIn to connect with decision-makers</li>
-                            <li>Qualified leads by evaluating business size, challenges, and readiness for digital adoption</li>
-                            <li>Supported account management efforts by maintaining strong client relationships</li>
-                            <li>Maintained accurate CRM records and ensured smooth handoffs to the sales team</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Experience Item 4 -->
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div class="experience-header-left">
-                            <h3 class="experience-title">Sales Development Representative</h3>
-                            <p class="experience-company">Opal Trading</p>
-                            <p class="experience-location">Ajman, UAE</p>
-                        </div>
-                        <span class="experience-period">November 2017 - December 2021</span>
-                    </div>
-                    <div class="experience-details">
-                        <ul>
-                            <li>Developed and executed effective sales strategies to achieve and exceed revenue targets</li>
-                            <li>Researched and targeted businesses in need of Opal Trading's products and services</li>
-                            <li>Conducted prospecting through cold calls, emails, and LinkedIn outreach to generate leads</li>
-                            <li>Assessed client needs, procurement timelines, and identified key decision-makers</li>
-                            <li>Managed sales pipeline, updated CRM, and tracked engagement metrics</li>
-                            <li>Provided continuous feedback to enhance team performance and drive business growth</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">Core Competencies</div>
-                <h2 class="section-title">Skills & Expertise</h2>
-                <p class="section-subtitle">Key strengths that drive business development success and client acquisition</p>
-            </div>
-            
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Sales & Business Development</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag highlight">Negotiation</span>
-                        <span class="skill-tag highlight">Prospecting</span>
-                        <span class="skill-tag">Lead Generation</span>
-                        <span class="skill-tag">Account Management</span>
-                        <span class="skill-tag">Client Acquisition</span>
-                        <span class="skill-tag">Sales Strategy</span>
-                        <span class="skill-tag">Relationship Building</span>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>Technical & Tools</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag highlight">CRM Systems</span>
-                        <span class="skill-tag">SaaS Solutions</span>
-                        <span class="skill-tag">Market Analysis</span>
-                        <span class="skill-tag">Product Demonstrations</span>
-                        <span class="skill-tag">Workflow Automation</span>
-                        <span class="skill-tag">Microsoft Office</span>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>Professional Skills</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag highlight">Strategic Communication</span>
-                        <span class="skill-tag highlight">Networking</span>
-                        <span class="skill-tag highlight">Problem Solving</span>
-                        <span class="skill-tag">Market Research</span>
-                        <span class="skill-tag">Cross-functional Collaboration</span>
-                        <span class="skill-tag">Presentation Skills</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">Academic Background</div>
-                <h2 class="section-title">Education & Languages</h2>
-                <p class="section-subtitle">Formal education and linguistic capabilities supporting professional success</p>
-            </div>
-            
-            <div class="education-list">
-                <div class="education-item">
-                    <h3>Bachelor of Commerce</h3>
-                    <p class="education-institution">Bangalore University</p>
-                    <p class="education-year">Graduated: 2009</p>
-                </div>
-                
-                <div class="education-item">
-                    <h3>Diploma in Business Administration</h3>
-                    <p class="education-institution">Faculty of Business Studies, Sudan</p>
-                    <p class="education-year">Completed: 2007</p>
-                </div>
-                
-                <div class="education-item">
-                    <h3>Languages</h3>
-                    <p class="education-institution">Fluent Communication</p>
-                    <div class="skill-tags" style="margin-top: 1rem;">
-                        <span class="skill-tag highlight">English (Fluent)</span>
-                        <span class="skill-tag highlight">Arabic (Native)</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">Get In Touch</div>
-                <h2 class="section-title">Contact Information</h2>
-                <p class="section-subtitle">Available for new opportunities and strategic business discussions</p>
-            </div>
-            
-            <div class="contact-container">
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <h3>Phone</h3>
-                    <p><a href="tel:+971551847343">+971 55 184 7343</a></p>
-                    <p style="font-size: 0.85rem; color: var(--gray-color); margin-top: 5px;">Click to call</p>
-                </div>
-                
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3>Email</h3>
-                    <p><a href="mailto:sami.abdoun@gmail.com?subject=Opportunity%20Discussion&body=Dear%20Sami,%0D%0A%0D%0AI%20came%20across%20your%20CV%20and%20would%20like%20to%20discuss%20opportunities.%0D%0A%0D%0ABest%20regards,">
-                        sami.abdoun@gmail.com
-                    </a></p>
-                    <p style="font-size: 0.85rem; color: var(--gray-color); margin-top: 5px;">Click to email me directly</p>
-                </div>
-                
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fab fa-linkedin-in"></i>
-                    </div>
-                    <h3>LinkedIn</h3>
-                    <p><a href="https://www.linkedin.com/in/sami-abdoun/" target="_blank">linkedin.com/in/sami-abdoun</a></p>
-                    <p style="font-size: 0.85rem; color: var(--gray-color); margin-top: 5px;">View my professional profile</p>
-                </div>
-                
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <h3>Location & Focus</h3>
-                    <p>Based in Dubai, UAE</p>
-                    <p>Markets: UAE & KSA</p>
-                    <p style="font-size: 0.85rem; color: var(--gray-color); margin-top: 5px;">Available for local & remote opportunities</p>
-                </div>
-            </div>
-            
-            <!-- Quick Contact Buttons -->
-            <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
-                <h3 style="margin-bottom: 1.5rem;">Quick Contact</h3>
-                <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-                    <a href="mailto:sami.abdoun@gmail.com?subject=Job%20Opportunity&body=Dear%20Sami,%0D%0A%0D%0AI%20have%20a%20job%20opportunity%20I'd%20like%20to%20discuss%20with%20you.%0D%0A%0D%0ABest%20regards," class="btn btn-primary">
-                        <i class="fas fa-briefcase"></i> Discuss Job Opportunity
-                    </a>
-                    <a href="mailto:sami.abdoun@gmail.com?subject=Business%20Partnership&body=Dear%20Sami,%0D%0A%0D%0AI'm%20interested%20in%20discussing%20a%20potential%20business%20partnership.%0D%0A%0D%0ABest%20regards," class="btn btn-secondary">
-                        <i class="fas fa-handshake"></i> Discuss Partnership
-                    </a>
-                    <a href="mailto:sami.abdoun@gmail.com?subject=General%20Inquiry&body=Dear%20Sami,%0D%0A%0D%0AI%20would%20like%20to%20connect%20with%20you%20regarding%20a%20general%20inquiry.%0D%0A%0D%0ABest%20regards," class="btn btn-secondary">
-                        <i class="fas fa-question-circle"></i> General Inquiry
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Send Me a Message Section -->
-    <section id="message" class="message-section">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">Let's Connect</div>
-                <h2 class="section-title">Send Me a Message</h2>
-                <p class="section-subtitle">Fill out the form below and I'll get back to you within 24 hours.</p>
-            </div>
-            
-            <div class="form-container">
-                <form class="message-form" action="https://formspree.io/f/meezdzgo" method="POST" id="contactForm">
-                    <!-- Formspree Configuration -->
-                    <input type="hidden" name="_subject" value="New Message from CV Website - Sami Abdoun">
-                    <input type="text" name="_gotcha" style="display:none">
-                    
-                    <div class="form-group">
-                        <label for="name">Full Name *</label>
-                        <input type="text" id="name" name="name" class="form-control" placeholder="Enter your full name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Your Email Address *</label>
-                        <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email address" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="company">Company (Optional)</label>
-                        <input type="text" id="company" name="company" class="form-control" placeholder="Enter your company name">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="subject">Subject *</label>
-                        <input type="text" id="subject" name="subject" class="form-control" placeholder="What is this regarding?" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Your Message *</label>
-                        <textarea id="message" name="message" class="form-control" placeholder="Type your message here..." required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn-submit">
-                        <i class="fas fa-paper-plane"></i> Send Message
-                    </button>
-                    
-                    <div class="form-note">
-                        <p><i class="fas fa-check-circle"></i> Your message will be sent directly to my inbox</p>
-                        <p><i class="fas fa-clock"></i> I typically respond within 24 hours</p>
-                    </div>
-                </form>
-                
-                <!-- Success Message (hidden by default) -->
-                <div id="success-message" class="success-message" style="display: none;">
-                    <i class="fas fa-check-circle"></i>
-                    <h3>Thank You!</h3>
-                    <p>Your message has been sent successfully. I'll get back to you within 24 hours.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <a href="#" class="footer-logo">Sami Abdoun</a>
-                <p class="footer-tagline">Business Development Professional specializing in B2B SaaS solutions across UAE and KSA markets</p>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/sami-abdoun/" target="_blank" class="social-link">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="mailto:sami.abdoun@gmail.com" class="social-link">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="tel:+971551847343" class="social-link">
-                        <i class="fas fa-phone"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 Sami Abdoun. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Dark Mode Toggle
-        const themeToggle = document.getElementById('themeToggle');
-        const body = document.body;
-        
-        // Check for saved theme preference
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        if (savedTheme === 'dark') {
-            body.classList.add('dark-mode');
-            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-        }
-        
-        themeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            
-            // Update icon
-            if (body.classList.contains('dark-mode')) {
-                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-                localStorage.setItem('theme', 'dark');
-            } else {
-                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-                localStorage.setItem('theme', 'light');
-            }
-        });
-        
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navLinks = document.getElementById('navLinks');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
-                ? '<i class="fas fa-times"></i>' 
-                : '<i class="fas fa-bars"></i>';
-        });
-        
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-                
-                // Update active class
-                document.querySelectorAll('.nav-links a').forEach(item => {
-                    item.classList.remove('active');
-                });
-                link.classList.add('active');
-            });
-        });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 100,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-        
-        // Add scroll effect to header
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
-            } else {
-                header.style.boxShadow = 'var(--shadow)';
-            }
-        });
-        
-        // Set active navigation based on scroll position
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.nav-links a');
-            
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= (sectionTop - 150)) {
-                    current = section.getAttribute('id');
-                }
-            });
-            
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
-        });
-        
-        // Contact Form Handling
-        const contactForm = document.getElementById('contactForm');
-        const successMessage = document.getElementById('success-message');
-        
-        // Check if form was submitted successfully (from URL parameter)
-        const urlParams = new URLSearchParams(window.location.search);
-        if (urlParams.get('success') === 'true') {
-            // Show success message
-            successMessage.style.display = 'block';
-            // Scroll to success message
-            successMessage.scrollIntoView({ behavior: 'smooth' });
-        }
-        
-        // Add form submission feedback
-        contactForm.addEventListener('submit', function(e) {
-            // Show loading state
-            const submitBtn = this.querySelector('.btn-submit');
-            const originalText = submitBtn.innerHTML;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-            submitBtn.disabled = true;
-            
-            // Form will submit to Formspree
-            // Formspree will redirect back with ?success=true parameter
-        });
-
-        // Check if CV file exists
-        document.addEventListener('DOMContentLoaded', function() {
-            const cvLink = document.querySelector('a[href*="Sami_Abdoun_CV.pdf"]');
-            if (cvLink) {
-                // Test if the file exists
-                fetch('Sami_Abdoun_CV.pdf', { method: 'HEAD' })
-                    .then(response => {
-                        if (!response.ok) {
-                            // File doesn't exist or can't be accessed
-                            cvLink.addEventListener('click', function(e) {
-                                e.preventDefault();
-                                alert('CV file not found or cannot be accessed. Please ensure the PDF file named "Sami_Abdoun_CV.pdf" is in the same folder as this HTML file.');
-                            });
-                        } else {
-                            // File exists, remove any error handlers
-                            console.log('CV file found and ready for download');
-                        }
-                    })
-                    .catch(error => {
-                        // Network error or file not found
-                        cvLink.addEventListener('click', function(e) {
-                            e.preventDefault();
-                            alert('Unable to access CV file. Please ensure the PDF file named "Sami_Abdoun_CV.pdf" is in the same folder as this HTML file.');
-                        });
-                    });
-            }
-        });
-    </script>
-</body>
-</html>
-            --light-gray: #f3f4f6;
-            --border-color: #e5e7eb;
-            --card-bg: #ffffff;
-            --body-bg: #f9fafb;
-            --text-color: #111827;
-            --text-light: #374151;
-            --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --border-radius: 8px;
-            --border-radius-lg: 12px;
-        }
-
-        .dark-mode {
-            --primary-color: #3b82f6;
-            --secondary-color: #2563eb;
-            --accent-color: #60a5fa;
-            --light-color: #1f2937;
-            --dark-color: #f9fafb;
-            --gray-color: #9ca3af;
-            --light-gray: #374151;
-            --border-color: #4b5563;
-            --card-bg: #111827;
-            --body-bg: #030712;
-            --text-color: #f9fafb;
-            --text-light: #d1d5db;
-            --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-            --shadow-lg: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 80px;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--body-bg);
-            transition: var(--transition);
-            font-size: 16px;
-        }
-
-        h1, h2, h3, h4, h5 {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-weight: 700;
-            color: var(--text-color);
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header & Navigation */
-        header {
-            background-color: var(--card-bg);
-            box-shadow: var(--shadow);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--primary-color);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo span {
-            color: var(--secondary-color);
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2.5rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: var(--transition);
-            position: relative;
-            padding: 5px 0;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-
-        .nav-links a.active {
-            color: var(--primary-color);
-        }
-
-        .nav-links a.active::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: var(--primary-color);
-            border-radius: 1px;
-        }
-
-        .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-        }
-
-        /* Theme Toggle */
-        .theme-toggle {
-            background: none;
-            border: 1px solid var(--border-color);
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            color: var(--text-color);
-            transition: var(--transition);
-            background-color: var(--light-gray);
-        }
-
-        .theme-toggle:hover {
-            background-color: var(--border-color);
-            transform: translateY(-2px);
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: var(--text-color);
-            cursor: pointer;
-            padding: 5px;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 160px 0 100px;
-            background: linear-gradient(135deg, var(--body-bg) 0%, var(--light-gray) 100%);
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .hero-content {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .hero-text {
-            position: relative;
-        }
-
-        .hero-tag {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: white;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            margin-bottom: 1.5rem;
-            letter-spacing: 0.5px;
-        }
-
-        .hero-title {
-            font-size: 3rem;
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            color: var(--text-color);
-        }
-
-        .hero-description {
-            font-size: 1.1rem;
-            color: var(--text-light);
-            margin-bottom: 2.5rem;
-            max-width: 600px;
-        }
-
-        .hero-btns {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px 28px;
-            border-radius: var(--border-radius);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: var(--transition);
-            cursor: pointer;
-            border: none;
-        }
-
-        .btn-primary {
-            background-color: var(--primary-color);
-            color: white;
-            border: 1px solid var(--primary-color);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--primary-color);
-            border: 1px solid var(--border-color);
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--light-gray);
-            border-color: var(--primary-color);
-            transform: translateY(-2px);
-        }
-
-        .hero-stats {
-            display: flex;
-            gap: 3rem;
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .stat {
-            text-align: left;
-        }
-
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--primary-color);
-            line-height: 1;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            font-weight: 500;
-        }
-
-        .hero-image {
-            position: relative;
-            text-align: center;
-        }
-
-        .profile-img {
+        .profile-img-placeholder {
             width: 360px;
             height: 360px;
             border-radius: var(--border-radius-lg);
-            object-fit: cover;
             border: 1px solid var(--border-color);
             box-shadow: var(--shadow-lg);
             background: linear-gradient(135deg, var(--light-gray) 0%, var(--border-color) 100%);
-            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 1.1rem;
         }
 
-        .profile-img:hover {
-            transform: scale(1.02);
+        .profile-img-placeholder i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
         }
 
         /* Section Styling */
@@ -2190,6 +781,12 @@
             .hero-stats {
                 justify-content: center;
             }
+
+            .profile-img, .profile-img-placeholder {
+                width: 320px;
+                height: 320px;
+                margin: 0 auto;
+            }
         }
 
         @media (max-width: 768px) {
@@ -2251,9 +848,9 @@
                 padding: 2rem;
             }
 
-            .profile-img {
-                width: 300px;
-                height: 300px;
+            .profile-img, .profile-img-placeholder {
+                width: 280px;
+                height: 280px;
             }
         }
 
@@ -2283,13 +880,33 @@
                 text-align: center;
             }
 
-            .profile-img {
-                width: 260px;
-                height: 260px;
+            .profile-img, .profile-img-placeholder {
+                width: 240px;
+                height: 240px;
             }
 
             .experience-item {
                 padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .profile-img, .profile-img-placeholder {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        /* Fix for dark mode toggle on mobile */
+        @media (hover: none) and (pointer: coarse) {
+            .theme-toggle:hover {
+                transform: none;
+                background-color: var(--light-gray);
+            }
+            
+            .theme-toggle:active {
+                background-color: var(--border-color);
+                transform: scale(0.95);
             }
         }
     </style>
@@ -2312,11 +929,11 @@
                     <li><a href="#message">Message</a></li>
                 </ul>
                 
-                <button class="theme-toggle" id="themeToggle">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
                     <i class="fas fa-moon"></i>
                 </button>
                 
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -2335,18 +952,17 @@
                     Proven track record of exceeding revenue goals and building strong client relationships. 
                     Skilled in prospecting and lead generation, market analysis, and collaborating with different lines of business.
                 </p>
-               <div class="hero-btns">
-    <a href="#contact" class="btn btn-primary">
-        <i class="fas fa-paper-plane"></i> Contact Me
-    </a>
-    <a href="#experience" class="btn btn-secondary">
-        <i class="fas fa-file-alt"></i> View Experience
-    </a>
-    <!-- Download CV Button -->
-    <a href="https://drive.google.com/uc?export=download&id=1bTle4Ia1N4einoBjpSPhnnIOPNQxagG6" download class="btn btn-secondary">
-        <i class="fas fa-download"></i> Download CV
-    </a>
-</div>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Contact Me
+                    </a>
+                    <a href="#experience" class="btn btn-secondary">
+                        <i class="fas fa-file-alt"></i> View Experience
+                    </a>
+                    <a href="https://drive.google.com/uc?export=download&id=1bTle4Ia1N4einoBjpSPhnnIOPNQxagG6" download class="btn btn-secondary">
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                </div>
                 <div class="hero-stats">
                     <div class="stat">
                         <div class="stat-number">15+ Years</div>
@@ -2363,10 +979,16 @@
                 </div>
             </div>
             <div class="hero-image">
-                <!-- Your Photo -->
+                <!-- Profile Image with Fallback -->
                 <img src="https://i.postimg.cc/RZyJfzZz/Sami-Abdoun.jpg" 
                      alt="Sami Abdoun" 
-                     class="profile-img">
+                     class="profile-img"
+                     onerror="this.style.display='none'; document.getElementById('profilePlaceholder').style.display='flex';">
+                <div id="profilePlaceholder" class="profile-img-placeholder" style="display: none;">
+                    <i class="fas fa-user-tie"></i>
+                    <span>Sami Abdoun</span>
+                    <span style="font-size: 0.9rem; margin-top: 0.5rem;">Business Development Professional</span>
+                </div>
             </div>
         </div>
     </section>
@@ -2707,46 +1329,48 @@
     </footer>
 
     <script>
-        // Dark Mode Toggle
+        // Dark Mode Toggle - Fixed for mobile
         const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = themeToggle.querySelector('i');
         const body = document.body;
         
         // Check for saved theme preference
         const savedTheme = localStorage.getItem('theme') || 'light';
         if (savedTheme === 'dark') {
             body.classList.add('dark-mode');
-            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            themeIcon.className = 'fas fa-sun';
         }
         
         themeToggle.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
             
-            // Update icon
+            // Update icon properly
             if (body.classList.contains('dark-mode')) {
-                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                themeIcon.className = 'fas fa-sun';
                 localStorage.setItem('theme', 'dark');
             } else {
-                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                themeIcon.className = 'fas fa-moon';
                 localStorage.setItem('theme', 'light');
             }
         });
         
         // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenuIcon = mobileMenuBtn.querySelector('i');
         const navLinks = document.getElementById('navLinks');
         
         mobileMenuBtn.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
-                ? '<i class="fas fa-times"></i>' 
-                : '<i class="fas fa-bars"></i>';
+            mobileMenuIcon.className = navLinks.classList.contains('active') 
+                ? 'fas fa-times' 
+                : 'fas fa-bars';
         });
         
         // Close mobile menu when clicking a link
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
-                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                mobileMenuIcon.className = 'fas fa-bars';
                 
                 // Update active class
                 document.querySelectorAll('.nav-links a').forEach(item => {
@@ -2829,36 +1453,38 @@
             
             // Form will submit to Formspree
             // Formspree will redirect back with ?success=true parameter
+            
+            // Reset button after 5 seconds in case of error
+            setTimeout(() => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }, 5000);
         });
-
-        // Check if CV file exists
+        
+        // Image fallback handler
         document.addEventListener('DOMContentLoaded', function() {
-            const cvLink = document.querySelector('a[href*="Sami_Abdoun_CV.pdf"]');
-            if (cvLink) {
-                // Test if the file exists
-                fetch('Sami_Abdoun_CV.pdf', { method: 'HEAD' })
-                    .then(response => {
-                        if (!response.ok) {
-                            // File doesn't exist or can't be accessed
-                            cvLink.addEventListener('click', function(e) {
-                                e.preventDefault();
-                                alert('CV file not found or cannot be accessed. Please ensure the PDF file named "Sami_Abdoun_CV.pdf" is in the same folder as this HTML file.');
-                            });
-                        } else {
-                            // File exists, remove any error handlers
-                            console.log('CV file found and ready for download');
-                        }
-                    })
-                    .catch(error => {
-                        // Network error or file not found
-                        cvLink.addEventListener('click', function(e) {
-                            e.preventDefault();
-                            alert('Unable to access CV file. Please ensure the PDF file named "Sami_Abdoun_CV.pdf" is in the same folder as this HTML file.');
-                        });
-                    });
+            const profileImg = document.querySelector('.profile-img');
+            const placeholder = document.getElementById('profilePlaceholder');
+            
+            // Check if image loads, if not show placeholder
+            if (profileImg.complete && profileImg.naturalHeight === 0) {
+                profileImg.style.display = 'none';
+                placeholder.style.display = 'flex';
             }
         });
+        
+        // Fix for mobile touch interactions
+        document.addEventListener('touchstart', function() {}, {passive: true});
+        
+        // Prevent zoom on double-tap for mobile
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function(event) {
+            const now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
     </script>
 </body>
 </html>
-
