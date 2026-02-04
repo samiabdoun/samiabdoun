@@ -303,16 +303,20 @@
         }
 
         .profile-img {
-            width: 100%;
-            max-width: 360px;
-            height: auto;
-            aspect-ratio: 1;
-            border-radius: var(--border-radius-lg);
-            object-fit: cover;
-            border: 1px solid var(--border-color);
-            box-shadow: var(--shadow-lg);
-            background: linear-gradient(135deg, var(--light-gray) 0%, var(--border-color) 100%);
-            transition: var(--transition);
+             width: 100%;
+    max-width: 360px;
+    height: auto;
+    aspect-ratio: 1;
+    border-radius: var(--border-radius-lg);
+    object-fit: cover;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-lg);
+    background: linear-gradient(135deg, var(--light-gray) 0%, var(--border-color) 100%);
+    transition: var(--transition);
+    /* Add these for better loading */
+    background-image: url('https://i.postimg.cc/jdB4YjDf/sami-photo-jpg-(2).jpg?v=1');
+    background-size: cover;
+    background-position: center;
         }
 
         .profile-img:hover {
@@ -2062,5 +2066,6 @@
     </script>
 </body>
 </html>
+
 
 
