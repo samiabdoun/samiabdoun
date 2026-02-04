@@ -303,20 +303,17 @@
         }
 
         .profile-img {
-             width: 100%;
-    max-width: 360px;
-    height: auto;
-    aspect-ratio: 1;
-    border-radius: var(--border-radius-lg);
-    object-fit: cover;
-    border: 1px solid var(--border-color);
-    box-shadow: var(--shadow-lg);
-    background: linear-gradient(135deg, var(--light-gray) 0%, var(--border-color) 100%);
-    transition: var(--transition);
-    /* Add these for better loading */
-    background-image: url('https://i.postimg.cc/jdB4YjDf/sami-photo-jpg-(2).jpg?v=1');
-    background-size: cover;
-    background-position: center;
+            width: 100%;
+            max-width: 360px;
+            height: auto;
+            aspect-ratio: 1;
+            border-radius: var(--border-radius-lg);
+            object-fit: cover;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-lg);
+            background: linear-gradient(135deg, var(--light-gray) 0%, var(--border-color) 100%);
+            transition: var(--transition);
+            display: block;
         }
 
         .profile-img:hover {
@@ -1062,10 +1059,16 @@
                     </div>
                 </div>
             </div>
-            <div class="hero-image">
-                <img "https://i.postimg.cc/jdB4YjDf/sami-photo-jpg-(2).jpg?v=1" 
+              <div class="hero-image">
+                <!-- Primary image source -->
+                <img src="https://i.postimg.cc/MTvV11n0/sami-photo-jpg-(2).jpg"  
                      alt="Sami Abdoun" 
-                     class="profile-img">
+                     class="profile-img"
+                     loading="eager"
+                     onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80'">
+                
+                <!-- Fallback using CSS background image -->
+                <div class="profile-fallback" style="display: none;"></div>
             </div>
         </div>
     </section>
@@ -1504,7 +1507,7 @@
         const navLinks = document.getElementById('navLinks');
         
         mobileMenuBtn.addEventListener('click', (e) => {
-            e.stopPropagation(); // Prevent event bubbling
+            e.stopPropagation();
             navLinks.classList.toggle('active');
             mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
                 ? '<i class="fas fa-times"></i>' 
@@ -1603,9 +1606,6 @@
             const originalText = submitBtn.innerHTML;
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitBtn.disabled = true;
-            
-            // Form will submit to Formspree
-            // Formspree will redirect back with ?success=true parameter
         });
 
         // INTERACTIVE IQ GAME LOGIC
@@ -2066,6 +2066,3 @@
     </script>
 </body>
 </html>
-
-
-
