@@ -676,6 +676,102 @@
             color: #10b981;
         }
 
+        /* NEW IQ GAME STYLES */
+        .game-container {
+            max-width: 500px;
+            margin: 2rem auto;
+            text-align: center;
+        }
+
+        .game-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .game-box {
+            background: var(--card-bg);
+            border-radius: var(--border-radius-lg);
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+        }
+
+        .game-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .puzzle-container {
+            background: var(--light-gray);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .pattern-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .pattern-cell {
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            height: 60px;
+            aspect-ratio: 1;
+            transition: all 0.2s ease;
+        }
+
+        .options-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.75rem;
+        }
+
+        .option-btn {
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            height: 60px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .option-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .feedback-container {
+            text-align: center;
+            min-height: 60px;
+            margin-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .iq-level {
+            text-align: center;
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-color);
+        }
+
         /* Footer */
         footer {
             background-color: var(--dark-color);
@@ -860,7 +956,16 @@
             .experience-item {
                 padding: 1.5rem;
             }
+
+            .options-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .pattern-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
+
         @media (max-width: 360px) {
             .profile-img {
                 width: 200px;
@@ -870,52 +975,13 @@
             .experience-item {
                 padding: 1.5rem;
             }
-        }
 
-        /* ===== MOBILE-ONLY IMAGE REPLACEMENT ===== */
-        /* This only affects mobile devices, PC remains unchanged */
-
-        @media (max-width: 768px) {
-            /* Hide the original image on mobile */
-            .hero-image img.profile-img {
-                display: none !important;
-            }
-            
-            /* Create a new image container for mobile */
-            .hero-image::after {
-                content: '';
-                display: block;
-                width: 280px;
-                height: 280px;
-                background-image: url('https://i.postimg.cc/jdB4YjDf/sami-photo-jpg-(2).jpg');
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-                border-radius: 12px;
-                border: 1px solid var(--border-color);
-                box-shadow: var(--shadow-lg);
-                margin: 0 auto;
-                background-color: var(--light-gray);
-            }
-            
-            /* Adjust for very small phones */
-            @media (max-width: 480px) {
-                .hero-image::after {
-                    width: 240px;
-                    height: 240px;
-                }
-            }
-            
-            @media (max-width: 360px) {
-                .hero-image::after {
-                    width: 200px;
-                    height: 200px;
-                }
+            .pattern-cell,
+            .option-btn {
+                height: 50px;
+                font-size: 1.1rem;
             }
         }
-
-    </style>
-</head>
     </style>
 </head>
 <body>
@@ -932,6 +998,7 @@
                     <li><a href="#experience" class="active">Experience</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#education">Education</a></li>
+                    <li><a href="#game">Fun Break</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#message">Message</a></li>
                 </ul>
@@ -959,18 +1026,17 @@
                     Proven track record of exceeding revenue goals and building strong client relationships. 
                     Skilled in prospecting and lead generation, market analysis, and collaborating with different lines of business.
                 </p>
-               <div class="hero-btns">
-    <a href="#contact" class="btn btn-primary">
-        <i class="fas fa-paper-plane"></i> Contact Me
-    </a>
-    <a href="#experience" class="btn btn-secondary">
-        <i class="fas fa-file-alt"></i> View Experience
-    </a>
-    <!-- Download CV Button -->
-    <a href="https://drive.google.com/uc?export=download&id=1bTle4Ia1N4einoBjpSPhnnIOPNQxagG6" download class="btn btn-secondary">
-        <i class="fas fa-download"></i> Download CV
-    </a>
-</div>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Contact Me
+                    </a>
+                    <a href="#experience" class="btn btn-secondary">
+                        <i class="fas fa-file-alt"></i> View Experience
+                    </a>
+                    <a href="https://drive.google.com/uc?export=download&id=1bTle4Ia1N4einoBjpSPhnnIOPNQxagG6" download class="btn btn-secondary">
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                </div>
                 <div class="hero-stats">
                     <div class="stat">
                         <div class="stat-number">15+ Years</div>
@@ -986,12 +1052,11 @@
                     </div>
                 </div>
             </div>
-          <div class="hero-image">
-    <!-- Your Photo - Working URL -->
-    <img src="https://i.postimg.cc/RZyJfzZz/Sami-Abdoun.jpg" 
-         alt="Sami Abdoun" 
-         class="profile-img">
-</div>
+            <div class="hero-image">
+                <img src="https://i.postimg.cc/RZyJfzZz/Sami-Abdoun.jpg" 
+                     alt="Sami Abdoun" 
+                     class="profile-img">
+            </div>
         </div>
     </section>
 
@@ -1172,6 +1237,75 @@
                     <div class="skill-tags" style="margin-top: 1rem;">
                         <span class="skill-tag highlight">English (Fluent)</span>
                         <span class="skill-tag highlight">Arabic (Native)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive IQ Game Section -->
+    <section id="game" style="background: linear-gradient(135deg, var(--light-gray) 0%, var(--body-bg) 100%);">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Brain Teaser</div>
+                <h2 class="section-title">Pattern IQ Challenge</h2>
+                <p class="section-subtitle">Test your logical reasoning with pattern recognition puzzles. New puzzle every reload!</p>
+            </div>
+            
+            <div class="game-container">
+                <div class="game-box">
+                    <div class="game-header">
+                        <div>
+                            <div class="score-display" style="font-size: 1.2rem; margin-bottom: 0.5rem;">
+                                Score: <span id="iqScore">0</span>
+                            </div>
+                            <div style="font-size: 0.9rem; color: var(--text-light);">
+                                <i class="fas fa-brain"></i> Puzzle: <span id="puzzleNumber">1</span>/5
+                            </div>
+                        </div>
+                        <div class="high-score" style="margin: 0;">
+                            <i class="fas fa-trophy"></i>
+                            <span>High IQ: <span id="iqHighScore">0</span></span>
+                        </div>
+                    </div>
+                    
+                    <div class="puzzle-container">
+                        <h3 style="margin-bottom: 1rem; font-size: 1.1rem; color: var(--text-color);" id="puzzleQuestion">
+                            Complete the pattern:
+                        </h3>
+                        
+                        <div class="pattern-grid" id="patternGrid">
+                            <!-- Pattern cells will be generated here -->
+                        </div>
+                        
+                        <div class="options-container" id="optionsContainer">
+                            <!-- Options will be generated here -->
+                        </div>
+                    </div>
+                    
+                    <div class="feedback-container" id="feedbackContainer">
+                        <!-- Feedback will appear here -->
+                    </div>
+                    
+                    <div class="game-controls" style="display: flex; gap: 1rem; justify-content: center;">
+                        <button id="nextPuzzleBtn" class="btn btn-primary" style="display: none;">
+                            <i class="fas fa-forward"></i> Next Puzzle
+                        </button>
+                        <button id="hintBtn" class="btn btn-secondary">
+                            <i class="fas fa-lightbulb"></i> Get Hint
+                        </button>
+                        <button id="resetGameBtn" class="btn btn-secondary">
+                            <i class="fas fa-redo"></i> New Game
+                        </button>
+                    </div>
+                    
+                    <div class="iq-level">
+                        <div style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.25rem;">
+                            Your Current IQ Level:
+                        </div>
+                        <div style="font-size: 1.3rem; font-weight: 700; color: var(--primary-color);" id="iqLevel">
+                            Average (90-110)
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1455,33 +1589,461 @@
             // Formspree will redirect back with ?success=true parameter
         });
 
-        // Check if CV file exists
-        document.addEventListener('DOMContentLoaded', function() {
-            const cvLink = document.querySelector('a[href*="Sami_Abdoun_CV.pdf"]');
-            if (cvLink) {
-                // Test if the file exists
-                fetch('Sami_Abdoun_CV.pdf', { method: 'HEAD' })
-                    .then(response => {
-                        if (!response.ok) {
-                            // File doesn't exist or can't be accessed
-                            cvLink.addEventListener('click', function(e) {
-                                e.preventDefault();
-                                alert('CV file not found or cannot be accessed. Please ensure the PDF file named "Sami_Abdoun_CV.pdf" is in the same folder as this HTML file.');
-                            });
-                        } else {
-                            // File exists, remove any error handlers
-                            console.log('CV file found and ready for download');
-                        }
-                    })
-                    .catch(error => {
-                        // Network error or file not found
-                        cvLink.addEventListener('click', function(e) {
-                            e.preventDefault();
-                            alert('Unable to access CV file. Please ensure the PDF file named "Sami_Abdoun_CV.pdf" is in the same folder as this HTML file.');
-                        });
-                    });
+        // INTERACTIVE IQ GAME LOGIC
+        const patternGrid = document.getElementById('patternGrid');
+        const optionsContainer = document.getElementById('optionsContainer');
+        const feedbackContainer = document.getElementById('feedbackContainer');
+        const iqScoreDisplay = document.getElementById('iqScore');
+        const puzzleNumberDisplay = document.getElementById('puzzleNumber');
+        const iqHighScoreDisplay = document.getElementById('iqHighScore');
+        const iqLevelDisplay = document.getElementById('iqLevel');
+        const nextPuzzleBtn = document.getElementById('nextPuzzleBtn');
+        const hintBtn = document.getElementById('hintBtn');
+        const resetGameBtn = document.getElementById('resetGameBtn');
+        const puzzleQuestion = document.getElementById('puzzleQuestion');
+
+        // Game state
+        let currentScore = 0;
+        let currentPuzzle = 0;
+        let totalPuzzles = 5;
+        let puzzles = [];
+        let currentPattern = null;
+        let highIQScore = localStorage.getItem('iqHighScore') || 0;
+        let hintsUsed = 0;
+        let correctAnswers = 0;
+
+        // Initialize high score
+        iqHighScoreDisplay.textContent = highIQScore;
+
+        // Pattern types
+        const patternTypes = [
+            'number-sequence',
+            'shape-rotation',
+            'color-progression',
+            'symbol-pattern',
+            'matrix-logic'
+        ];
+
+        // Generate puzzles
+        function generatePuzzles() {
+            puzzles = [];
+            for (let i = 0; i < totalPuzzles; i++) {
+                puzzles.push(generatePuzzle(i));
             }
+        }
+
+        // Generate a single puzzle
+        function generatePuzzle(level) {
+            const patternType = patternTypes[Math.floor(Math.random() * patternTypes.length)];
+            
+            switch(patternType) {
+                case 'number-sequence':
+                    return generateNumberSequence(level);
+                case 'shape-rotation':
+                    return generateShapeRotation(level);
+                case 'color-progression':
+                    return generateColorProgression(level);
+                case 'symbol-pattern':
+                    return generateSymbolPattern(level);
+                case 'matrix-logic':
+                    return generateMatrixLogic(level);
+                default:
+                    return generateNumberSequence(level);
+            }
+        }
+
+        // Number sequence pattern
+        function generateNumberSequence(level) {
+            const sequences = [
+                { pattern: [1, 3, 5, 7, 9], answer: 11, rule: '+2' },
+                { pattern: [2, 4, 8, 16, 32], answer: 64, rule: '×2' },
+                { pattern: [1, 1, 2, 3, 5], answer: 8, rule: 'Fibonacci' },
+                { pattern: [3, 6, 9, 12, 15], answer: 18, rule: '+3' },
+                { pattern: [5, 10, 15, 20, 25], answer: 30, rule: '+5' },
+                { pattern: [100, 81, 64, 49, 36], answer: 25, rule: 'Square numbers' },
+                { pattern: [1, 4, 9, 16, 25], answer: 36, rule: 'Squares' },
+                { pattern: [2, 3, 5, 7, 11], answer: 13, rule: 'Prime numbers' }
+            ];
+            
+            const seq = sequences[Math.floor(Math.random() * sequences.length)];
+            const options = generateOptions(seq.answer, 'number');
+            
+            return {
+                type: 'number-sequence',
+                question: "What number completes the sequence?",
+                pattern: seq.pattern,
+                answer: seq.answer,
+                options: options,
+                hint: `The pattern is: ${seq.rule}`
+            };
+        }
+
+        // Shape rotation pattern
+        function generateShapeRotation(level) {
+            const shapes = ['▲', '▶', '▼', '◀'];
+            const startIdx = Math.floor(Math.random() * shapes.length);
+            const pattern = [];
+            
+            for (let i = 0; i < 4; i++) {
+                pattern.push(shapes[(startIdx + i) % shapes.length]);
+            }
+            
+            const answer = shapes[(startIdx + 4) % shapes.length];
+            const options = generateOptions(answer, 'shape');
+            
+            return {
+                type: 'shape-rotation',
+                question: "Which shape comes next?",
+                pattern: pattern,
+                answer: answer,
+                options: options,
+                hint: "The shapes are rotating clockwise"
+            };
+        }
+
+        // Color progression pattern
+        function generateColorProgression(level) {
+            const colors = ['🔴', '🟡', '🔵', '🟢', '🟠', '🟣'];
+            const startIdx = Math.floor(Math.random() * colors.length);
+            const step = Math.floor(Math.random() * 2) + 1;
+            const pattern = [];
+            
+            for (let i = 0; i < 4; i++) {
+                pattern.push(colors[(startIdx + i * step) % colors.length]);
+            }
+            
+            const answer = colors[(startIdx + 4 * step) % colors.length];
+            const options = generateOptions(answer, 'color');
+            
+            return {
+                type: 'color-progression',
+                question: "Which color comes next?",
+                pattern: pattern,
+                answer: answer,
+                options: options,
+                hint: `The pattern skips ${step === 1 ? 'one color' : 'two colors'} each time`
+            };
+        }
+
+        // Symbol pattern
+        function generateSymbolPattern(level) {
+            const symbols = ['★', '■', '●', '◆', '▲', '♥'];
+            const pattern = [];
+            const usedSymbols = new Set();
+            
+            for (let i = 0; i < 4; i++) {
+                const symbol = symbols[i % 3];
+                pattern.push(symbol);
+                usedSymbols.add(symbol);
+            }
+            
+            const answer = symbols[pattern.length % 3];
+            const options = generateOptions(answer, 'symbol');
+            
+            return {
+                type: 'symbol-pattern',
+                question: "Which symbol comes next?",
+                pattern: pattern,
+                answer: answer,
+                options: options,
+                hint: "The pattern repeats every three symbols"
+            };
+        }
+
+        // Matrix logic pattern
+        function generateMatrixLogic(level) {
+            const patterns = [
+                { 
+                    matrix: [[1, 2], [3, 4]], 
+                    answer: 5,
+                    question: "Complete the 3x3 matrix (bottom right corner):"
+                },
+                { 
+                    matrix: [[2, 4, 6], [8, 10, 12]], 
+                    answer: 14,
+                    question: "Complete the pattern in the last row:"
+                }
+            ];
+            
+            const pattern = patterns[Math.floor(Math.random() * patterns.length)];
+            const options = generateOptions(pattern.answer, 'number');
+            
+            return {
+                type: 'matrix-logic',
+                question: pattern.question,
+                pattern: pattern.matrix.flat(),
+                answer: pattern.answer,
+                options: options,
+                hint: "Look for a consistent mathematical operation between numbers"
+            };
+        }
+
+        // Generate answer options
+        function generateOptions(correctAnswer, type) {
+            const options = [correctAnswer];
+            
+            while (options.length < 6) {
+                let wrongOption;
+                
+                if (type === 'number') {
+                    wrongOption = correctAnswer + (Math.random() > 0.5 ? 1 : -1) * Math.floor(Math.random() * 10) + 1;
+                    if (wrongOption < 0) wrongOption = Math.abs(wrongOption);
+                } else {
+                    const allOptions = {
+                        shape: ['▲', '▶', '▼', '◀', '●', '■'],
+                        color: ['🔴', '🟡', '🔵', '🟢', '🟠', '🟣'],
+                        symbol: ['★', '■', '●', '◆', '▲', '♥']
+                    };
+                    
+                    const available = allOptions[type];
+                    wrongOption = available[Math.floor(Math.random() * available.length)];
+                }
+                
+                if (!options.includes(wrongOption)) {
+                    options.push(wrongOption);
+                }
+            }
+            
+            return shuffleArray(options);
+        }
+
+        // Shuffle array utility
+        function shuffleArray(array) {
+            const shuffled = [...array];
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+            return shuffled;
+        }
+
+        // Display current puzzle
+        function displayPuzzle(puzzleIndex) {
+            currentPattern = puzzles[puzzleIndex];
+            patternGrid.innerHTML = '';
+            optionsContainer.innerHTML = '';
+            feedbackContainer.innerHTML = '';
+            
+            puzzleQuestion.textContent = currentPattern.question;
+            
+            currentPattern.pattern.forEach((item, index) => {
+                const cell = document.createElement('div');
+                cell.className = 'pattern-cell';
+                cell.style.cssText = `
+                    background: var(--card-bg);
+                    border: 2px solid var(--border-color);
+                    border-radius: var(--border-radius);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.5rem;
+                    height: 60px;
+                    aspect-ratio: 1;
+                `;
+                
+                if (index === currentPattern.pattern.length - 1) {
+                    cell.style.border = '2px dashed var(--primary-color)';
+                    cell.style.background = 'rgba(37, 99, 235, 0.1)';
+                    cell.textContent = '?';
+                } else {
+                    cell.textContent = item;
+                }
+                
+                patternGrid.appendChild(cell);
+            });
+            
+            currentPattern.options.forEach((option, index) => {
+                const optionBtn = document.createElement('button');
+                optionBtn.className = 'option-btn';
+                optionBtn.style.cssText = `
+                    background: var(--card-bg);
+                    border: 2px solid var(--border-color);
+                    border-radius: var(--border-radius);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.2rem;
+                    height: 60px;
+                    cursor: pointer;
+                    transition: all 0.2s ease;
+                `;
+                optionBtn.textContent = option;
+                
+                optionBtn.addEventListener('click', () => checkAnswer(option));
+                optionBtn.addEventListener('mouseenter', () => {
+                    optionBtn.style.transform = 'translateY(-2px)';
+                    optionBtn.style.boxShadow = 'var(--shadow)';
+                });
+                optionBtn.addEventListener('mouseleave', () => {
+                    optionBtn.style.transform = 'translateY(0)';
+                    optionBtn.style.boxShadow = 'none';
+                });
+                
+                optionsContainer.appendChild(optionBtn);
+            });
+            
+            puzzleNumberDisplay.textContent = puzzleIndex + 1;
+            nextPuzzleBtn.style.display = 'none';
+        }
+
+        // Check answer
+        function checkAnswer(selectedOption) {
+            const isCorrect = selectedOption == currentPattern.answer;
+            const optionBtns = document.querySelectorAll('.option-btn');
+            
+            optionBtns.forEach(btn => {
+                btn.disabled = true;
+                
+                if (btn.textContent == currentPattern.answer) {
+                    btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+                    btn.style.color = 'white';
+                    btn.style.borderColor = '#10b981';
+                }
+                
+                if (btn.textContent == selectedOption && !isCorrect) {
+                    btn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+                    btn.style.color = 'white';
+                    btn.style.borderColor = '#ef4444';
+                }
+            });
+            
+            if (isCorrect) {
+                const points = 10 - hintsUsed * 2;
+                currentScore += Math.max(points, 1);
+                correctAnswers++;
+                
+                feedbackContainer.innerHTML = `
+                    <div style="color: #10b981; font-weight: 600;">
+                        <i class="fas fa-check-circle"></i> Correct! +${points} points
+                    </div>
+                    <div style="font-size: 0.9rem; color: var(--text-light); margin-top: 0.5rem;">
+                        Well done! ${currentPuzzle < totalPuzzles - 1 ? 'Ready for the next puzzle?' : 'Game complete!'}
+                    </div>
+                `;
+                
+                if (currentPuzzle < totalPuzzles - 1) {
+                    nextPuzzleBtn.style.display = 'inline-flex';
+                } else {
+                    endGame();
+                }
+            } else {
+                feedbackContainer.innerHTML = `
+                    <div style="color: #ef4444; font-weight: 600;">
+                        <i class="fas fa-times-circle"></i> Incorrect!
+                    </div>
+                    <div style="font-size: 0.9rem; color: var(--text-light); margin-top: 0.5rem;">
+                        The correct answer was: ${currentPattern.answer}
+                    </div>
+                `;
+                
+                if (currentPuzzle < totalPuzzles - 1) {
+                    nextPuzzleBtn.style.display = 'inline-flex';
+                } else {
+                    endGame();
+                }
+            }
+            
+            updateScoreDisplay();
+            hintsUsed = 0;
+        }
+
+        // Show hint
+        function showHint() {
+            if (hintsUsed < 2) {
+                hintsUsed++;
+                feedbackContainer.innerHTML = `
+                    <div style="color: #f59e0b; font-weight: 600;">
+                        <i class="fas fa-lightbulb"></i> Hint: ${currentPattern.hint}
+                    </div>
+                    <div style="font-size: 0.9rem; color: var(--text-light); margin-top: 0.5rem;">
+                        Using hint will reduce points earned for correct answer
+                    </div>
+                `;
+            } else {
+                feedbackContainer.innerHTML = `
+                    <div style="color: #6b7280; font-weight: 600;">
+                        <i class="fas fa-exclamation-circle"></i> No more hints available
+                    </div>
+                `;
+            }
+        }
+
+        // Update score display
+        function updateScoreDisplay() {
+            iqScoreDisplay.textContent = currentScore;
+            
+            const accuracy = (correctAnswers / (currentPuzzle + 1)) * 100;
+            let iqLevel = '';
+            
+            if (accuracy >= 90) iqLevel = 'Genius (140+)';
+            else if (accuracy >= 75) iqLevel = 'Superior (120-140)';
+            else if (accuracy >= 50) iqLevel = 'Above Average (110-120)';
+            else if (accuracy >= 25) iqLevel = 'Average (90-110)';
+            else iqLevel = 'Below Average (<90)';
+            
+            iqLevelDisplay.textContent = iqLevel;
+            
+            if (currentScore > highIQScore) {
+                highIQScore = currentScore;
+                iqHighScoreDisplay.textContent = highIQScore;
+                localStorage.setItem('iqHighScore', highIQScore);
+            }
+        }
+
+        // End game
+        function endGame() {
+            const accuracy = (correctAnswers / totalPuzzles) * 100;
+            
+            setTimeout(() => {
+                feedbackContainer.innerHTML = `
+                    <div style="font-weight: 600; color: var(--primary-color); font-size: 1.1rem;">
+                        Game Complete!
+                    </div>
+                    <div style="color: var(--text-light); margin-top: 0.5rem;">
+                        Final Score: ${currentScore} | Accuracy: ${accuracy.toFixed(1)}%
+                    </div>
+                    <div style="margin-top: 0.75rem;">
+                        <button onclick="startNewGame()" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.9rem;">
+                            <i class="fas fa-play"></i> Play Again
+                        </button>
+                    </div>
+                `;
+            }, 1000);
+        }
+
+        // Start new game
+        function startNewGame() {
+            currentScore = 0;
+            currentPuzzle = 0;
+            correctAnswers = 0;
+            hintsUsed = 0;
+            generatePuzzles();
+            displayPuzzle(currentPuzzle);
+            updateScoreDisplay();
+        }
+
+        // Initialize game
+        function initGame() {
+            generatePuzzles();
+            displayPuzzle(currentPuzzle);
+            updateScoreDisplay();
+        }
+
+        // Event listeners
+        nextPuzzleBtn.addEventListener('click', () => {
+            currentPuzzle++;
+            displayPuzzle(currentPuzzle);
         });
+
+        hintBtn.addEventListener('click', showHint);
+
+        resetGameBtn.addEventListener('click', startNewGame);
+
+        // Initialize the game
+        initGame();
+
+        // Expose for button onclick
+        window.startNewGame = startNewGame;
     </script>
 </body>
 </html>
