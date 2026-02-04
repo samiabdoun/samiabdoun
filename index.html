@@ -179,6 +179,7 @@
             color: var(--text-color);
             cursor: pointer;
             padding: 5px;
+            z-index: 1001;
         }
 
         /* Hero Section */
@@ -302,8 +303,10 @@
         }
 
         .profile-img {
-            width: 360px;
-            height: 360px;
+            width: 100%;
+            max-width: 360px;
+            height: auto;
+            aspect-ratio: 1;
             border-radius: var(--border-radius-lg);
             object-fit: cover;
             border: 1px solid var(--border-color);
@@ -855,6 +858,10 @@
             .hero-stats {
                 justify-content: center;
             }
+
+            .hero-image {
+                order: -1;
+            }
         }
 
         @media (max-width: 768px) {
@@ -875,6 +882,7 @@
                 box-shadow: var(--shadow-lg);
                 transform: translateY(-100%);
                 opacity: 0;
+                visibility: hidden;
                 transition: var(--transition);
                 z-index: 999;
                 border-top: 1px solid var(--border-color);
@@ -883,6 +891,7 @@
             .nav-links.active {
                 transform: translateY(0);
                 opacity: 1;
+                visibility: visible;
             }
 
             .hero {
@@ -917,8 +926,7 @@
             }
 
             .profile-img {
-                width: 300px;
-                height: 300px;
+                max-width: 300px;
             }
         }
 
@@ -949,8 +957,7 @@
             }
 
             .profile-img {
-                width: 260px;
-                height: 260px;
+                max-width: 280px;
             }
 
             .experience-item {
@@ -968,8 +975,7 @@
 
         @media (max-width: 360px) {
             .profile-img {
-                width: 200px;
-                height: 200px;
+                max-width: 240px;
             }
 
             .experience-item {
@@ -1489,15 +1495,24 @@
             }
         });
         
-        // Mobile menu toggle
+        // Mobile menu toggle - FIXED
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const navLinks = document.getElementById('navLinks');
         
-        mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent event bubbling
             navLinks.classList.toggle('active');
             mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
                 ? '<i class="fas fa-times"></i>' 
                 : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            }
         });
         
         // Close mobile menu when clicking a link
