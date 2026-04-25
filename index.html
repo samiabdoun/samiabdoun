@@ -1,2178 +1,1018 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sami Abdoun | Business Development Professional</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #2563eb;
-            --secondary-color: #1e40af;
-            --accent-color: #3b82f6;
-            --light-color: #ffffff;
-            --dark-color: #1f2937;
-            --gray-color: #6b7280;
-            --light-gray: #f3f4f6;
-            --border-color: #e5e7eb;
-            --card-bg: #ffffff;
-            --body-bg: #f9fafb;
-            --text-color: #111827;
-            --text-light: #374151;
-            --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --border-radius: 8px;
-            --border-radius-lg: 12px;
-        }
-
-        .dark-mode {
-            --primary-color: #3b82f6;
-            --secondary-color: #2563eb;
-            --accent-color: #60a5fa;
-            --light-color: #1f2937;
-            --dark-color: #f9fafb;
-            --gray-color: #9ca3af;
-            --light-gray: #374151;
-            --border-color: #4b5563;
-            --card-bg: #111827;
-            --body-bg: #030712;
-            --text-color: #f9fafb;
-            --text-light: #d1d5db;
-            --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-            --shadow-lg: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 80px;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--body-bg);
-            transition: var(--transition);
-            font-size: 16px;
-        }
-
-        h1, h2, h3, h4, h5 {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-weight: 700;
-            color: var(--text-color);
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header & Navigation */
-        header {
-            background-color: var(--card-bg);
-            box-shadow: var(--shadow);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--primary-color);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo span {
-            color: var(--secondary-color);
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2.5rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: var(--transition);
-            position: relative;
-            padding: 5px 0;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-
-        .nav-links a.active {
-            color: var(--primary-color);
-        }
-
-        .nav-links a.active::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: var(--primary-color);
-            border-radius: 1px;
-        }
-
-        .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-        }
-
-        /* Theme Toggle */
-        .theme-toggle {
-            background: none;
-            border: 1px solid var(--border-color);
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            color: var(--text-color);
-            transition: var(--transition);
-            background-color: var(--light-gray);
-        }
-
-        .theme-toggle:hover {
-            background-color: var(--border-color);
-            transform: translateY(-2px);
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: var(--text-color);
-            cursor: pointer;
-            padding: 5px;
-            z-index: 1001;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 160px 0 100px;
-            background: linear-gradient(135deg, var(--body-bg) 0%, var(--light-gray) 100%);
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .hero-content {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .hero-text {
-            position: relative;
-        }
-
-        .hero-tag {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: white;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            margin-bottom: 1.5rem;
-            letter-spacing: 0.5px;
-        }
-
-        .hero-title {
-            font-size: 3rem;
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            color: var(--text-color);
-        }
-
-        .hero-description {
-            font-size: 1.1rem;
-            color: var(--text-light);
-            margin-bottom: 2.5rem;
-            max-width: 600px;
-        }
-
-        .hero-btns {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px 28px;
-            border-radius: var(--border-radius);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: var(--transition);
-            cursor: pointer;
-            border: none;
-        }
-
-        .btn-primary {
-            background-color: var(--primary-color);
-            color: white;
-            border: 1px solid var(--primary-color);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--primary-color);
-            border: 1px solid var(--border-color);
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--light-gray);
-            border-color: var(--primary-color);
-            transform: translateY(-2px);
-        }
-
-        .hero-stats {
-            display: flex;
-            gap: 3rem;
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .stat {
-            text-align: left;
-        }
-
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--primary-color);
-            line-height: 1;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            font-weight: 500;
-        }
-
-        .hero-image {
-            position: relative;
-            text-align: center;
-        }
-
-        .profile-img {
-            width: 100%;
-            max-width: 360px;
-            height: auto;
-            aspect-ratio: 1;
-            border-radius: var(--border-radius-lg);
-            object-fit: cover;
-            border: 1px solid var(--border-color);
-            box-shadow: var(--shadow-lg);
-            background: linear-gradient(135deg, var(--light-gray) 0%, var(--border-color) 100%);
-            transition: var(--transition);
-            display: block;
-        }
-
-        .profile-img:hover {
-            transform: scale(1.02);
-        }
-
-        /* Section Styling */
-        section {
-            padding: 100px 0;
-        }
-
-        .section-header {
-            margin-bottom: 4rem;
-        }
-
-        .section-tag {
-            display: inline-block;
-            color: var(--primary-color);
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 1rem;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-        }
-
-        .section-subtitle {
-            font-size: 1.1rem;
-            color: var(--text-light);
-            max-width: 700px;
-        }
-
-        /* Experience Section */
-        .experience-list {
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
-        }
-
-        .experience-item {
-            background-color: var(--card-bg);
-            border-radius: var(--border-radius-lg);
-            padding: 2.5rem;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border-color);
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .experience-item:hover {
-            box-shadow: var(--shadow-lg);
-            transform: translateY(-2px);
-            border-color: var(--primary-color);
-        }
-
-        .experience-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 1.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .experience-header-left {
-            flex: 1;
-        }
-
-        .experience-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .experience-company {
-            font-size: 1.1rem;
-            color: var(--primary-color);
-            font-weight: 600;
-            margin-bottom: 0.25rem;
-        }
-
-        .experience-location {
-            font-size: 0.95rem;
-            color: var(--text-light);
-        }
-
-        .experience-period {
-            background-color: var(--light-gray);
-            color: var(--text-color);
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            white-space: nowrap;
-            margin-left: 1rem;
-        }
-
-        .experience-details {
-            color: var(--text-light);
-        }
-
-        .experience-details ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .experience-details li {
-            margin-bottom: 0.75rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .experience-details li:before {
-            content: "▸";
-            position: absolute;
-            left: 0;
-            color: var(--primary-color);
-            font-weight: bold;
-        }
-
-        /* Skills Section */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-
-        .skill-category {
-            background-color: var(--card-bg);
-            border-radius: var(--border-radius-lg);
-            padding: 2rem;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border-color);
-        }
-
-        .skill-category h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid var(--border-color);
-            color: var(--text-color);
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-        }
-
-        .skill-tag {
-            background-color: var(--light-gray);
-            color: var(--text-color);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: var(--transition);
-        }
-
-        .skill-tag.highlight {
-            background-color: var(--primary-color);
-            color: white;
-        }
-
-        /* Education Section */
-        .education-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .education-item {
-            background-color: var(--card-bg);
-            border-radius: var(--border-radius-lg);
-            padding: 2rem;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border-color);
-        }
-
-        .education-item h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-color);
-        }
-
-        .education-institution {
-            color: var(--primary-color);
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .education-year {
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-
-        /* Contact Section */
-        .contact-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .contact-card {
-            background-color: var(--card-bg);
-            border-radius: var(--border-radius-lg);
-            padding: 2rem;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border-color);
-            transition: var(--transition);
-        }
-
-        .contact-card:hover {
-            box-shadow: var(--shadow-lg);
-            transform: translateY(-2px);
-            border-color: var(--primary-color);
-        }
-
-        .contact-icon {
-            width: 56px;
-            height: 56px;
-            background-color: var(--light-gray);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary-color);
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.75rem;
-            color: var(--text-color);
-        }
-
-        .contact-card p {
-            color: var(--text-light);
-            margin-bottom: 0.25rem;
-        }
-
-        .contact-card a {
-            color: var(--primary-color);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .contact-card a:hover {
-            color: var(--secondary-color);
-            text-decoration: underline;
-        }
-    <!-- AI Sales Pitch Generator -->
-    <section id="ai-tool" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-top: 1px solid var(--border-color);">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">AI-Powered Tool</div>
-                <h2 class="section-title">Sales Pitch Generator</h2>
-                <p class="section-subtitle">Generate professional sales pitches instantly using AI</p>
-            </div>
-            
-            <div class="ai-tool-container" style="max-width: 800px; margin: 0 auto;">
-                <div class="ai-tool-box" style="background: var(--card-bg); border-radius: var(--border-radius-lg); padding: 2.5rem; box-shadow: var(--shadow-lg); border: 1px solid var(--border-color);">
-                    
-                    <div class="input-section" style="margin-bottom: 2rem;">
-                        <h3 style="margin-bottom: 1.5rem; color: var(--text-color); font-size: 1.3rem;">
-                            <i class="fas fa-robot" style="color: #2563eb; margin-right: 10px;"></i>
-                            Customize Your Pitch
-                        </h3>
-                        
-                        <div class="form-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
-                            <div class="form-group">
-                                <label for="productService" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-color);">
-                                    Product/Service *
-                                </label>
-                                <input type="text" id="productService" class="form-control" placeholder="e.g., SaaS CRM Software" style="width: 100%;">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="targetAudience" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-color);">
-                                    Target Audience *
-                                </label>
-                                <input type="text" id="targetAudience" class="form-control" placeholder="e.g., Small Business Owners" style="width: 100%;">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="keyBenefit" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-color);">
-                                    Key Benefit *
-                                </label>
-                                <input type="text" id="keyBenefit" class="form-control" placeholder="e.g., Increase sales by 30%" style="width: 100%;">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="tone" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-color);">
-                                    Tone of Voice
-                                </label>
-                                <select id="tone" class="form-control" style="width: 100%;">
-                                    <option value="professional">Professional</option>
-                                    <option value="friendly">Friendly</option>
-                                    <option value="persuasive">Persuasive</option>
-                                    <option value="concise">Concise</option>
-                                </select>
-                            </div>
-                        </div>
-                        
-                        <button id="generatePitchBtn" class="btn btn-primary" style="width: 100%; padding: 15px; font-size: 1.1rem;">
-                            <i class="fas fa-magic"></i> Generate Sales Pitch
-                        </button>
-                    </div>
-                    
-                    <div class="result-section" style="display: none;" id="resultSection">
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
-                            <h3 style="color: var(--text-color); font-size: 1.3rem;">
-                                <i class="fas fa-file-alt" style="color: #10b981; margin-right: 10px;"></i>
-                                Generated Pitch
-                            </h3>
-                            <div class="tool-actions" style="display: flex; gap: 10px;">
-                                <button id="copyPitchBtn" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.9rem;">
-                                    <i class="fas fa-copy"></i> Copy
-                                </button>
-                                <button id="regenerateBtn" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.9rem;">
-                                    <i class="fas fa-redo"></i> Regenerate
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <div class="pitch-output" id="pitchOutput" style="background: var(--light-gray); border-radius: var(--border-radius); padding: 1.5rem; min-height: 200px; border: 1px solid var(--border-color); line-height: 1.6; white-space: pre-wrap;">
-                            <!-- Generated pitch will appear here -->
-                        </div>
-                        
-                        <div class="pitch-tips" style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
-                            <h4 style="margin-bottom: 1rem; color: var(--text-color);">
-                                <i class="fas fa-lightbulb" style="color: #f59e0b; margin-right: 10px;"></i>
-                                Pitch Tips
-                            </h4>
-                            <ul style="color: var(--text-light); padding-left: 1.5rem;">
-                                <li style="margin-bottom: 0.5rem;">Personalize with the client's name and company</li>
-                                <li style="margin-bottom: 0.5rem;">Follow up within 48 hours</li>
-                                <li style="margin-bottom: 0.5rem;">Include a clear call-to-action</li>
-                                <li>Test different subject lines for better open rates</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="loading-section" style="display: none; text-align: center; padding: 3rem;" id="loadingSection">
-                        <div class="spinner" style="width: 60px; height: 60px; border: 4px solid var(--light-gray); border-top: 4px solid var(--primary-color); border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 1.5rem;"></div>
-                        <h4 style="color: var(--text-color); margin-bottom: 0.5rem;">Generating your pitch...</h4>
-                        <p style="color: var(--text-light);">AI is crafting the perfect sales pitch for you</p>
-                    </div>
-                    
-                </div>
-                
-                <div class="ai-disclaimer" style="text-align: center; margin-top: 2rem; color: var(--text-light); font-size: 0.9rem;">
-                    <p><i class="fas fa-info-circle"></i> This AI tool generates sample sales pitches. Always personalize before sending to clients.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-        /* Message Form Section */
-        .message-section {
-            background: linear-gradient(135deg, var(--body-bg) 0%, var(--light-gray) 100%);
-            border-top: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .form-container {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .message-form {
-            background-color: var(--card-bg);
-            border-radius: var(--border-radius-lg);
-            padding: 3rem;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border-color);
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: var(--text-color);
-            font-size: 0.95rem;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 12px 16px;
-            border: 1px solid var(--border-color);
-            border-radius: var(--border-radius);
-            background-color: var(--card-bg);
-            color: var(--text-color);
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
-            transition: var(--transition);
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-        }
-
-        .form-control::placeholder {
-            color: var(--gray-color);
-        }
-
-        textarea.form-control {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        .btn-submit {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 14px 32px;
-            border-radius: var(--border-radius);
-            font-weight: 600;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: var(--transition);
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            width: 100%;
-            justify-content: center;
-        }
-
-        .btn-submit:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .form-note {
-            text-align: center;
-            margin-top: 2rem;
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-
-        /* Success Message */
-        .success-message {
-            display: none;
-            background-color: #d1fae5;
-            border: 1px solid #10b981;
-            color: #065f46;
-            padding: 1.5rem;
-            border-radius: var(--border-radius);
-            margin-top: 2rem;
-            text-align: center;
-        }
-
-        .success-message i {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: #10b981;
-        }
-
-        /* NEW IQ GAME STYLES */
-        .game-container {
-            max-width: 500px;
-            margin: 2rem auto;
-            text-align: center;
-        }
-
-        .game-title {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--text-color);
-        }
-
-        .game-box {
-            background: var(--card-bg);
-            border-radius: var(--border-radius-lg);
-            padding: 1.5rem;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border-color);
-            margin-bottom: 2rem;
-        }
-
-        .game-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .puzzle-container {
-            background: var(--light-gray);
-            border-radius: var(--border-radius);
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .pattern-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .pattern-cell {
-            background: var(--card-bg);
-            border: 2px solid var(--border-color);
-            border-radius: var(--border-radius);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            height: 60px;
-            aspect-ratio: 1;
-            transition: all 0.2s ease;
-        }
-
-        .options-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0.75rem;
-        }
-
-        .option-btn {
-            background: var(--card-bg);
-            border: 2px solid var(--border-color);
-            border-radius: var(--border-radius);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            height: 60px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .option-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow);
-        }
-
-        .feedback-container {
-            text-align: center;
-            min-height: 60px;
-            margin-bottom: 1rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .iq-level {
-            text-align: center;
-            margin-top: 1.5rem;
-            padding-top: 1rem;
-            border-top: 1px solid var(--border-color);
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--dark-color);
-            color: white;
-            padding: 4rem 0 2rem;
-        }
-
-        .dark-mode footer {
-            background-color: #1e293b;
-        }
-
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .footer-logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: white;
-            text-decoration: none;
-        }
-
-        .footer-tagline {
-            font-size: 1.1rem;
-            max-width: 600px;
-            text-align: center;
-            opacity: 0.9;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1.5rem;
-        }
-
-        .social-link {
-            width: 44px;
-            height: 44px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.1rem;
-            transition: var(--transition);
-            text-decoration: none;
-        }
-
-        .social-link:hover {
-            background-color: var(--primary-color);
-            transform: translateY(-3px);
-        }
-
-        .copyright {
-            font-size: 0.9rem;
-            opacity: 0.7;
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-
-            .hero-text {
-                text-align: center;
-            }
-
-            .hero-btns {
-                justify-content: center;
-            }
-
-            .hero-stats {
-                justify-content: center;
-            }
-
-            .hero-image {
-                order: -1;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .nav-links {
-                position: fixed;
-                top: 80px;
-                left: 0;
-                width: 100%;
-                background-color: var(--card-bg);
-                flex-direction: column;
-                align-items: center;
-                padding: 2rem;
-                gap: 1.5rem;
-                box-shadow: var(--shadow-lg);
-                transform: translateY(-100%);
-                opacity: 0;
-                visibility: hidden;
-                transition: var(--transition);
-                z-index: 999;
-                border-top: 1px solid var(--border-color);
-            }
-
-            .nav-links.active {
-                transform: translateY(0);
-                opacity: 1;
-                visibility: visible;
-            }
-
-            .hero {
-                padding: 140px 0 80px;
-            }
-
-            .hero-title {
-                font-size: 2.5rem;
-            }
-
-            .experience-header {
-                flex-direction: column;
-                gap: 1rem;
-                align-items: flex-start;
-            }
-
-            .experience-period {
-                margin-left: 0;
-                align-self: flex-start;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            section {
-                padding: 80px 0;
-            }
-
-            .message-form {
-                padding: 2rem;
-            }
-
-            .profile-img {
-                max-width: 300px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .hero-title {
-                font-size: 2rem;
-            }
-
-            .hero-btns {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .btn {
-                width: 100%;
-                max-width: 280px;
-                justify-content: center;
-            }
-
-            .hero-stats {
-                flex-direction: column;
-                gap: 1.5rem;
-                align-items: center;
-            }
-
-            .stat {
-                text-align: center;
-            }
-
-            .profile-img {
-                max-width: 280px;
-            }
-
-            .experience-item {
-                padding: 1.5rem;
-            }
-
-            .options-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .pattern-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        @media (max-width: 360px) {
-            .profile-img {
-                max-width: 240px;
-            }
-
-            .experience-item {
-                padding: 1.5rem;
-            }
-
-            .pattern-cell,
-            .option-btn {
-                height: 50px;
-                font-size: 1.1rem;
-            }
-        }
-    </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Sami Abdoun — Business Development & SaaS Sales</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --indigo:#1a0a3c;
+  --indigo-mid:#2d1264;
+  --pink:#ff2d78;
+  --cyan:#00f5ff;
+  --amber:#ffb800;
+  --white:#f0eeff;
+  --gray:#8b83b0;
+  --card-bg:rgba(26,10,60,0.7);
+  --glass:rgba(255,255,255,0.04);
+  --border:rgba(255,255,255,0.08);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+
+/* SCROLLBAR */
+::-webkit-scrollbar{width:6px;}
+::-webkit-scrollbar-track{background:#0d0520;}
+::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--pink),var(--cyan));border-radius:3px;}
+
+/* NOISE OVERLAY */
+body::before{
+  content:'';position:fixed;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:9999;opacity:.4;
+}
+
+body{
+  font-family:'DM Sans',sans-serif;
+  background:#0d0520;
+  color:var(--white);
+  overflow-x:hidden;
+  cursor:none;
+}
+
+/* CUSTOM CURSOR */
+#cursor-dot{
+  position:fixed;width:8px;height:8px;
+  background:var(--cyan);border-radius:50%;
+  pointer-events:none;z-index:99999;
+  transform:translate(-50%,-50%);
+  box-shadow:0 0 12px var(--cyan),0 0 24px var(--cyan);
+  transition:width .2s,height .2s,background .2s;
+}
+#cursor-ring{
+  position:fixed;width:36px;height:36px;
+  border:1.5px solid rgba(0,245,255,0.5);
+  border-radius:50%;
+  pointer-events:none;z-index:99998;
+  transform:translate(-50%,-50%);
+  transition:transform .12s ease,width .3s,height .3s,border-color .3s;
+}
+body:hover #cursor-dot{}
+
+/* LOADING SCREEN */
+#loader{
+  position:fixed;inset:0;z-index:100000;
+  background:#0d0520;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:32px;
+  transition:opacity .8s ease,visibility .8s;
+}
+#loader.hidden{opacity:0;visibility:hidden;}
+.loader-initials{
+  font-family:'Syne',sans-serif;
+  font-size:clamp(60px,10vw,100px);
+  font-weight:800;
+  background:linear-gradient(135deg,var(--pink),var(--cyan),var(--amber));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+  animation:pulseInit 1s ease-in-out infinite alternate;
+}
+@keyframes pulseInit{from{opacity:.6;transform:scale(.97);}to{opacity:1;transform:scale(1.03);}}
+.loader-bar-wrap{
+  width:200px;height:3px;background:rgba(255,255,255,.1);border-radius:2px;overflow:hidden;
+}
+.loader-bar{
+  height:100%;width:0;
+  background:linear-gradient(90deg,var(--pink),var(--cyan),var(--amber));
+  border-radius:2px;
+  animation:loadBar 1.8s ease forwards;
+}
+@keyframes loadBar{0%{width:0%;}60%{width:80%;}100%{width:100%;}}
+.loader-text{font-size:13px;color:var(--gray);letter-spacing:2px;text-transform:uppercase;}
+
+/* CANVAS */
+#particle-canvas{
+  position:fixed;inset:0;z-index:0;pointer-events:none;
+}
+
+/* NAVBAR */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  padding:18px 6%;
+  display:flex;align-items:center;justify-content:space-between;
+  background:rgba(13,5,32,0.7);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+  transform:translateY(-100%);
+  animation:navSlide .8s .5s ease forwards;
+}
+@keyframes navSlide{to{transform:translateY(0);}}
+.nav-logo{
+  font-family:'Syne',sans-serif;font-weight:800;font-size:20px;
+  background:linear-gradient(90deg,var(--cyan),var(--pink));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  text-decoration:none;
+}
+.nav-links{display:flex;gap:32px;list-style:none;}
+.nav-links a{
+  color:var(--gray);text-decoration:none;font-size:14px;font-weight:500;
+  position:relative;transition:color .3s;letter-spacing:.5px;
+}
+.nav-links a::after{
+  content:'';position:absolute;bottom:-4px;left:0;width:0;height:1.5px;
+  background:linear-gradient(90deg,var(--cyan),var(--pink));
+  transition:width .3s;
+}
+.nav-links a:hover{color:var(--white);}
+.nav-links a:hover::after{width:100%;}
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}
+.nav-toggle span{display:block;width:24px;height:2px;background:var(--white);transition:.3s;}
+
+/* SECTIONS BASE */
+section{position:relative;z-index:10;padding:100px 6%;}
+.section-label{
+  font-size:12px;letter-spacing:3px;text-transform:uppercase;
+  color:var(--cyan);font-weight:600;margin-bottom:12px;
+}
+.section-title{
+  font-family:'Syne',sans-serif;font-size:clamp(32px,5vw,52px);font-weight:800;
+  margin-bottom:60px;line-height:1.1;
+}
+.section-title span{
+  background:linear-gradient(90deg,var(--pink),var(--amber));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+
+/* HERO */
+#hero{
+  min-height:100vh;display:flex;align-items:center;
+  padding-top:120px;
+}
+.hero-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;
+  max-width:1200px;margin:0 auto;width:100%;
+}
+.hero-left{}
+.avail-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(0,245,255,.08);border:1px solid rgba(0,245,255,.2);
+  padding:6px 16px;border-radius:100px;
+  font-size:13px;color:var(--cyan);margin-bottom:28px;
+}
+.avail-dot{width:8px;height:8px;border-radius:50%;background:var(--cyan);animation:blink 1.4s infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:.2;}}
+.hero-name{
+  font-family:'Syne',sans-serif;
+  font-size:clamp(44px,7vw,80px);
+  font-weight:800;line-height:1;
+  margin-bottom:20px;
+  background:linear-gradient(135deg,#fff 20%,var(--pink) 50%,var(--cyan) 70%,var(--amber) 90%);
+  background-size:300% 300%;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:shimmer 4s ease-in-out infinite;
+}
+@keyframes shimmer{0%,100%{background-position:0% 50%;}50%{background-position:100% 50%;}}
+.hero-title{font-size:18px;color:var(--gray);margin-bottom:16px;font-weight:400;}
+.hero-desc{
+  font-size:15px;color:rgba(240,238,255,.6);line-height:1.8;
+  max-width:480px;margin-bottom:40px;
+}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;}
+.btn{
+  padding:14px 28px;border-radius:8px;font-size:14px;font-weight:600;
+  text-decoration:none;transition:.3s;display:inline-flex;align-items:center;gap:8px;
+  font-family:'DM Sans',sans-serif;cursor:none;
+}
+.btn-primary{
+  background:linear-gradient(135deg,var(--pink),var(--indigo-mid));
+  color:#fff;border:1px solid rgba(255,45,120,.3);
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(255,45,120,.4);}
+.btn-outline{
+  background:transparent;color:var(--cyan);
+  border:1px solid rgba(0,245,255,.3);
+}
+.btn-outline:hover{background:rgba(0,245,255,.08);transform:translateY(-2px);}
+
+/* HERO CARD */
+.hero-right{display:flex;justify-content:center;align-items:center;}
+.card-wrap{position:relative;width:300px;height:380px;}
+.card-orb{
+  position:absolute;inset:-40px;
+  background:radial-gradient(circle,rgba(255,45,120,.3) 0%,transparent 70%);
+  animation:orbPulse 3s ease-in-out infinite;
+  border-radius:50%;
+}
+@keyframes orbPulse{0%,100%{transform:scale(1);opacity:.7;}50%{transform:scale(1.1);opacity:1;}}
+.card-ring{
+  position:absolute;inset:-20px;
+  border:2px dashed rgba(0,245,255,.3);
+  border-radius:50%;
+  animation:spin 20s linear infinite;
+}
+@keyframes spin{from{transform:rotate(0);}to{transform:rotate(360deg);}}
+.hero-card{
+  position:relative;width:100%;height:100%;
+  background:linear-gradient(135deg,rgba(45,18,100,.9),rgba(26,10,60,.95));
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:24px;
+  backdrop-filter:blur(20px);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:16px;
+  box-shadow:0 30px 80px rgba(0,0,0,.5);
+  animation:float3d 6s ease-in-out infinite;
+}
+@keyframes float3d{
+  0%,100%{transform:perspective(1000px) rotateY(-5deg) rotateX(3deg) translateY(0);}
+  50%{transform:perspective(1000px) rotateY(5deg) rotateX(-3deg) translateY(-15px);}
+}
+.card-avatar{
+  width:90px;height:90px;border-radius:50%;
+  background:linear-gradient(135deg,var(--pink),var(--cyan));
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Syne',sans-serif;font-size:32px;font-weight:800;
+  color:#fff;
+  box-shadow:0 0 40px rgba(255,45,120,.4);
+}
+.card-name{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;}
+.card-role{font-size:12px;color:var(--cyan);letter-spacing:1px;text-transform:uppercase;}
+.card-stats{
+  display:flex;gap:20px;margin-top:8px;
+  border-top:1px solid var(--border);padding-top:16px;width:80%;justify-content:center;
+}
+.stat{text-align:center;}
+.stat-val{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--amber);}
+.stat-lbl{font-size:10px;color:var(--gray);letter-spacing:.5px;margin-top:2px;}
+
+/* MARQUEE */
+.marquee-section{
+  position:relative;z-index:10;padding:40px 0;
+  overflow:hidden;
+  border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+}
+.marquee-track{
+  display:flex;gap:60px;width:max-content;
+  animation:marqueeScroll 25s linear infinite;
+}
+@keyframes marqueeScroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.marquee-item{
+  font-family:'Syne',sans-serif;font-size:13px;font-weight:600;
+  color:var(--gray);letter-spacing:2px;text-transform:uppercase;
+  display:flex;align-items:center;gap:16px;white-space:nowrap;
+}
+.marquee-item::after{content:'✦';color:var(--pink);font-size:10px;}
+
+/* SKILLS */
+#skills{background:transparent;}
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;max-width:1200px;margin:0 auto;}
+.skill-bar-group{display:flex;flex-direction:column;gap:24px;}
+.skill-bar-item{}
+.skill-bar-header{display:flex;justify-content:space-between;margin-bottom:10px;}
+.skill-bar-name{font-size:14px;font-weight:500;}
+.skill-bar-pct{font-size:13px;color:var(--cyan);}
+.skill-bar-track{
+  height:6px;background:rgba(255,255,255,.08);border-radius:3px;overflow:hidden;
+  position:relative;
+}
+.skill-bar-fill{
+  height:100%;width:0;border-radius:3px;
+  background:linear-gradient(90deg,var(--pink),var(--cyan));
+  transition:width 1.2s cubic-bezier(.4,0,.2,1);
+  position:relative;overflow:hidden;
+}
+.skill-bar-fill::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.4),transparent);
+  transform:translateX(-100%);
+  transition:transform .5s .5s ease;
+}
+.skill-bar-fill.done::after{transform:translateX(100%);}
+
+.chips-section{margin-top:60px;max-width:1200px;margin-left:auto;margin-right:auto;}
+.chips-title{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;margin-bottom:24px;color:var(--gray);}
+.chip-cloud{display:flex;flex-wrap:wrap;gap:12px;}
+.chip{
+  padding:8px 18px;border-radius:100px;
+  font-size:13px;font-weight:500;
+  border:1px solid var(--border);
+  background:var(--glass);
+  color:var(--white);
+  transition:.3s;cursor:default;
+}
+.chip:hover{transform:translateY(-4px);border-color:var(--cyan);color:var(--cyan);background:rgba(0,245,255,.06);}
+
+/* EXPERIENCE */
+#experience{background:rgba(26,10,60,.2);}
+.timeline{position:relative;max-width:900px;margin:0 auto;}
+.timeline::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;width:2px;
+  background:linear-gradient(180deg,var(--pink),var(--cyan),var(--amber));
+  border-radius:1px;
+}
+.timeline-item{
+  padding-left:48px;padding-bottom:64px;position:relative;
+}
+.timeline-dot{
+  position:absolute;left:-7px;top:6px;
+  width:16px;height:16px;border-radius:50%;
+  background:linear-gradient(135deg,var(--pink),var(--cyan));
+  box-shadow:0 0 20px rgba(255,45,120,.5);
+}
+.job-card{
+  background:var(--card-bg);
+  border:1px solid var(--border);
+  border-radius:16px;padding:28px;
+  backdrop-filter:blur(10px);
+  transition:.4s;
+}
+.job-card:hover{
+  transform:translateX(8px);
+  border-color:rgba(0,245,255,.3);
+  box-shadow:0 8px 40px rgba(0,245,255,.1),-4px 0 20px rgba(255,45,120,.1);
+}
+.job-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;flex-wrap:wrap;gap:8px;}
+.job-title{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;}
+.job-date{font-size:12px;color:var(--amber);background:rgba(255,184,0,.1);padding:4px 12px;border-radius:100px;border:1px solid rgba(255,184,0,.2);}
+.job-company{font-size:14px;color:var(--cyan);margin-bottom:4px;font-weight:500;}
+.job-location{font-size:12px;color:var(--gray);margin-bottom:16px;}
+.job-desc{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:16px;}
+.job-desc li{font-size:14px;color:rgba(240,238,255,.7);line-height:1.7;padding-left:20px;position:relative;}
+.job-desc li::before{content:'→';position:absolute;left:0;color:var(--pink);font-size:12px;}
+.job-badges{display:flex;flex-wrap:wrap;gap:8px;}
+.badge{
+  font-size:11px;padding:4px 12px;border-radius:100px;font-weight:600;
+  background:rgba(255,45,120,.12);color:var(--pink);border:1px solid rgba(255,45,120,.2);
+}
+.badge.cyan{background:rgba(0,245,255,.1);color:var(--cyan);border-color:rgba(0,245,255,.2);}
+.badge.amber{background:rgba(255,184,0,.1);color:var(--amber);border-color:rgba(255,184,0,.2);}
+
+/* PROJECTS */
+#projects{background:transparent;}
+.projects-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+  max-width:1200px;margin:0 auto;
+}
+.project-card{
+  background:var(--card-bg);
+  border:1px solid var(--border);
+  border-radius:16px;padding:28px;
+  position:relative;overflow:hidden;
+  transition:.4s;
+}
+.project-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--pink),var(--cyan),var(--amber));
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .4s ease;
+}
+.project-card:hover::before{transform:scaleX(1);}
+.project-card:hover{
+  transform:translateY(-8px);
+  border-color:rgba(255,255,255,.15);
+  box-shadow:0 20px 60px rgba(0,0,0,.4);
+}
+.project-emoji{font-size:36px;margin-bottom:16px;display:block;}
+.project-name{font-family:'Syne',sans-serif;font-size:17px;font-weight:700;margin-bottom:10px;}
+.project-desc{font-size:13px;color:rgba(240,238,255,.6);line-height:1.7;margin-bottom:16px;}
+.project-tags{display:flex;flex-wrap:wrap;gap:6px;}
+.project-tag{
+  font-size:11px;padding:3px 10px;border-radius:100px;
+  background:rgba(255,255,255,.05);border:1px solid var(--border);color:var(--gray);
+}
+
+/* EDUCATION */
+#education{background:rgba(26,10,60,.2);}
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:900px;margin:0 auto 60px;}
+.edu-card{
+  background:var(--card-bg);border:1px solid var(--border);
+  border-radius:16px;padding:28px;transition:.3s;
+}
+.edu-card:hover{border-color:rgba(255,184,0,.3);transform:translateY(-4px);}
+.edu-icon{font-size:28px;margin-bottom:12px;}
+.edu-degree{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;margin-bottom:6px;}
+.edu-school{font-size:14px;color:var(--cyan);margin-bottom:4px;}
+.edu-year{font-size:12px;color:var(--gray);}
+
+.langs-section{max-width:900px;margin:0 auto;}
+.langs-title{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;margin-bottom:20px;}
+.lang-badges{display:flex;gap:16px;flex-wrap:wrap;}
+.lang-badge{
+  padding:10px 24px;border-radius:100px;font-size:14px;font-weight:600;
+  background:linear-gradient(135deg,rgba(255,45,120,.15),rgba(0,245,255,.15));
+  border:1px solid rgba(255,255,255,.1);
+  animation:langFloat 3s ease-in-out infinite;
+}
+.lang-badge:nth-child(2){animation-delay:.5s;}
+@keyframes langFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-6px);}}
+
+/* CONTACT */
+#contact{background:transparent;padding-bottom:120px;}
+.contact-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:60px;
+  max-width:1000px;margin:0 auto;align-items:center;
+}
+.contact-cards{display:flex;flex-direction:column;gap:16px;}
+.contact-card{
+  display:flex;align-items:center;gap:16px;
+  background:var(--card-bg);border:1px solid var(--border);
+  border-radius:12px;padding:20px 24px;
+  transition:.3s;
+}
+.contact-card:hover{transform:translateX(8px);border-color:rgba(0,245,255,.3);}
+.contact-icon{
+  width:44px;height:44px;border-radius:10px;
+  background:linear-gradient(135deg,rgba(255,45,120,.2),rgba(0,245,255,.1));
+  display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;
+}
+.contact-info-label{font-size:11px;color:var(--gray);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;}
+.contact-info-val{font-size:14px;font-weight:500;}
+.contact-info-val a{color:var(--white);text-decoration:none;}
+.contact-info-val a:hover{color:var(--cyan);}
+
+.contact-visual{display:flex;justify-content:center;align-items:center;position:relative;}
+.contact-avatar-wrap{position:relative;width:200px;height:200px;}
+.ripple{
+  position:absolute;inset:0;border-radius:50%;
+  border:1.5px solid rgba(0,245,255,.3);
+  animation:rippleAnim 2.5s ease-out infinite;
+}
+.ripple:nth-child(2){animation-delay:.8s;}
+.ripple:nth-child(3){animation-delay:1.6s;}
+@keyframes rippleAnim{
+  0%{transform:scale(1);opacity:.7;}
+  100%{transform:scale(2.2);opacity:0;}
+}
+.contact-avatar{
+  position:absolute;inset:30px;border-radius:50%;
+  background:linear-gradient(135deg,var(--pink),var(--indigo-mid));
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Syne',sans-serif;font-size:36px;font-weight:800;
+  box-shadow:0 0 60px rgba(255,45,120,.4);
+}
+
+/* FOOTER */
+footer{
+  position:relative;z-index:10;
+  text-align:center;padding:32px;
+  border-top:1px solid var(--border);
+  color:var(--gray);font-size:13px;
+}
+footer span{color:var(--pink);}
+
+/* REVEAL ANIMATIONS */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.left{transform:translateX(-40px);}
+.reveal.right{transform:translateX(40px);}
+.reveal.visible{opacity:1;transform:translate(0);}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .projects-grid{grid-template-columns:1fr 1fr;}
+  .skills-grid{grid-template-columns:1fr;}
+}
+@media(max-width:768px){
+  .hero-grid{grid-template-columns:1fr;gap:48px;}
+  .hero-right{display:none;}
+  .skills-grid{grid-template-columns:1fr;}
+  .projects-grid{grid-template-columns:1fr;}
+  .edu-grid{grid-template-columns:1fr;}
+  .contact-grid{grid-template-columns:1fr;}
+  .contact-visual{display:none;}
+  .nav-links{
+    display:none;flex-direction:column;
+    position:fixed;top:0;right:0;bottom:0;width:260px;
+    background:rgba(13,5,32,.98);backdrop-filter:blur(20px);
+    padding:80px 40px;gap:32px;z-index:999;
+    transform:translateX(100%);transition:.4s;
+  }
+  .nav-links.open{display:flex;transform:translateX(0);}
+  .nav-toggle{display:flex;}
+  .timeline::before{display:none;}
+  .timeline-item{padding-left:0;}
+  .timeline-dot{display:none;}
+}
+</style>
 </head>
 <body>
-    <!-- Header & Navigation -->
-    <header>
-        <div class="container nav-container">
-            <a href="#" class="logo">
-                <i class="fas fa-user-tie"></i>
-                Sami <span>Abdoun</span>
-            </a>
-            
-            <div class="nav-right">
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="#experience" class="active">Experience</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#game">Fun Break</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#message">Message</a></li>
-                </ul>
-                
-                <button class="theme-toggle" id="themeToggle">
-                    <i class="fas fa-moon"></i>
-                </button>
-                
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
+
+<!-- CURSOR -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-initials">SA</div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+  <div class="loader-text">Loading Portfolio</div>
+</div>
+
+<!-- PARTICLE CANVAS -->
+<canvas id="particle-canvas"></canvas>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">Sami Abdoun</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#skills" onclick="closeNav()">Skills</a></li>
+    <li><a href="#experience" onclick="closeNav()">Experience</a></li>
+    <li><a href="#projects" onclick="closeNav()">Projects</a></li>
+    <li><a href="#education" onclick="closeNav()">Education</a></li>
+    <li><a href="#contact" onclick="closeNav()">Contact</a></li>
+  </ul>
+  <div class="nav-toggle" onclick="toggleNav()" id="navToggle">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grid">
+    <div class="hero-left reveal">
+      <div class="avail-tag"><span class="avail-dot"></span>Available for New Opportunities</div>
+      <h1 class="hero-name">Sami<br>Abdoun</h1>
+      <p class="hero-title">Business Development & SaaS Sales Professional</p>
+      <p class="hero-desc">10 years of experience, 6 in SaaS — specialising in sales across the MEA region. Proven track record exceeding revenue targets through consultative selling and pipeline mastery.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn btn-primary">Get In Touch →</a>
+        <a href="#experience" class="btn btn-outline">View Experience</a>
+      </div>
+    </div>
+    <div class="hero-right reveal right">
+      <div class="card-wrap">
+        <div class="card-orb"></div>
+        <div class="card-ring"></div>
+        <div class="hero-card">
+          <div class="card-avatar">SA</div>
+          <div class="card-name">Sami Abdoun</div>
+          <div class="card-role">Sr. Business Development Manager</div>
+          <div class="card-stats">
+            <div class="stat"><div class="stat-val">10+</div><div class="stat-lbl">Years Exp.</div></div>
+            <div class="stat"><div class="stat-val">$2.8M</div><div class="stat-lbl">Pipeline Built</div></div>
+            <div class="stat"><div class="stat-val">MEA</div><div class="stat-lbl">Region Focus</div></div>
+          </div>
         </div>
-    </header>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <div class="hero-tag">
-                    <i class="fas fa-briefcase"></i> B2B | SAAS | Technology
-                </div>
-                <h1 class="hero-title">Business Development Professional</h1>
-                <p class="hero-description">
-                    Proven track record of exceeding revenue goals and building strong client relationships. 
-                    Skilled in prospecting and lead generation, market analysis, and collaborating with different lines of business.
-                </p>
-                <div class="hero-btns">
-                    <a href="#contact" class="btn btn-primary">
-                        <i class="fas fa-paper-plane"></i> Contact Me
-                    </a>
-                    <a href="#experience" class="btn btn-secondary">
-                        <i class="fas fa-file-alt"></i> View Experience
-                    </a>
-                    <a href="https://drive.google.com/file/d/1K4riZ1w6gvUMucAr8w56tG5mOxRXcBCX/view?usp=drive_link" download class="btn btn-secondary">
-                        <i class="fas fa-download"></i> Download CV
-                    </a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <div class="stat-number">15+ Years</div>
-                        <div class="stat-label">Professional Experience</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">UAE & KSA</div>
-                        <div class="stat-label">Market Expertise</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">100%+</div>
-                        <div class="stat-label">Target Achievement</div>
-                    </div>
-                </div>
-            </div>
-              <div class="hero-image">
-                <!-- Primary image source -->
-               <a href="https://ibb.co/RrZ6CKD"><img src="https://i.ibb.co/vygdJWj/9b56790a-6d9f-494e-baa7-e714355dbad0.png"
-                     alt="Sami Abdoun" 
-                     class="profile-img"
-                     loading="eager"
-                    
-                
-                <!-- Fallback using CSS background image -->
-                <div class="profile-fallback" style="display: none;"></div>
-            </div>
+<!-- MARQUEE -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <div class="marquee-item">Mr. Alfred PMS</div>
+    <div class="marquee-item">Trio</div>
+    <div class="marquee-item">Archdesk</div>
+    <div class="marquee-item">Opal Trading</div>
+    <div class="marquee-item">Dubai — UAE</div>
+    <div class="marquee-item">HubSpot CRM</div>
+    <div class="marquee-item">LinkedIn Sales Navigator</div>
+    <div class="marquee-item">Apollo</div>
+    <div class="marquee-item">Lusha</div>
+    <div class="marquee-item">GCC Markets</div>
+    <div class="marquee-item">MEA Region</div>
+    <div class="marquee-item">SaaS Sales</div>
+    <!-- duplicate for infinite effect -->
+    <div class="marquee-item">Mr. Alfred PMS</div>
+    <div class="marquee-item">Trio</div>
+    <div class="marquee-item">Archdesk</div>
+    <div class="marquee-item">Opal Trading</div>
+    <div class="marquee-item">Dubai — UAE</div>
+    <div class="marquee-item">HubSpot CRM</div>
+    <div class="marquee-item">LinkedIn Sales Navigator</div>
+    <div class="marquee-item">Apollo</div>
+    <div class="marquee-item">Lusha</div>
+    <div class="marquee-item">GCC Markets</div>
+    <div class="marquee-item">MEA Region</div>
+    <div class="marquee-item">SaaS Sales</div>
+  </div>
+</div>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div style="max-width:1200px;margin:0 auto;">
+    <p class="section-label reveal">Expertise</p>
+    <h2 class="section-title reveal">Skills & <span>Proficiency</span></h2>
+    <div class="skills-grid">
+      <div class="skill-bar-group">
+        <div class="skill-bar-item reveal">
+          <div class="skill-bar-header"><span class="skill-bar-name">Pipeline Generation & Management</span><span class="skill-bar-pct">95%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="95"></div></div>
         </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">Professional Journey</div>
-                <h2 class="section-title">Work Experience</h2>
-                <p class="section-subtitle">A consistent track record of driving business growth and building strategic partnerships</p>
-            </div>
-            
-            <div class="experience-list">
-                <!-- Experience Item 1 -->
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div class="experience-header-left">
-                            <h3 class="experience-title">Senior Business Development Executive - KSA</h3>
-                            <p class="experience-company">Mr.Alfred PMS</p>
-                            <p class="experience-location">Dubai, UAE</p>
-                        </div>
-                        <span class="experience-period">March 2025 - Feb 2026</span>
-                    </div>
-                    <div class="experience-details">
-                        <ul>
-                            <li>Collaborate with marketing teams to align campaigns, share market insights, and optimize lead generation strategies</li>
-                            <li>Identify and engage holiday home SaaS operators to generate new business opportunities by identifying gaps or upcoming projects</li>
-                            <li>Coordinate with solution engineers to deliver product demonstrations to decision-makers</li>
-                            <li>Build and manage strategic accounts to ensure strong client relationships and sustainable growth</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Experience Item 2 -->
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div class="experience-header-left">
-                            <h3 class="experience-title">Inside Sales Specialist (Education Solutions)</h3>
-                            <p class="experience-company">Trio</p>
-                            <p class="experience-location">Dubai, UAE (UAE & KSA Markets)</p>
-                        </div>
-                        <span class="experience-period">June 2023 - February 2025</span>
-                    </div>
-                    <div class="experience-details">
-                        <ul>
-                            <li>Built and maintained strong relationships with existing and potential clients in the education sector</li>
-                            <li>Researched and targeted K-12 schools requiring monitoring and MDM solutions</li>
-                            <li>Conducted strategic outreach through cold calls, emails, and LinkedIn to generate interest</li>
-                            <li>Assessed IT security needs, procurement timelines, and identified key decision-makers</li>
-                            <li>Managed sales pipeline and CRM, coordinating lead handoff to Account Executives</li>
-                            <li>Acquired and expanded partnerships with schools across Saudi Arabia and UAE</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Experience Item 3 -->
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div class="experience-header-left">
-                            <h3 class="experience-title">Business Development Representative</h3>
-                            <p class="experience-company">Archdesk</p>
-                            <p class="experience-location">Dubai, UAE (UAE & KSA Markets)</p>
-                        </div>
-                        <span class="experience-period">December 2021 - February 2023</span>
-                    </div>
-                    <div class="experience-details">
-                        <ul>
-                            <li>Prospected and engaged construction firms across Saudi Arabia to generate new business opportunities</li>
-                            <li>Identified and targeted key accounts, including contractors seeking workflow automation solutions</li>
-                            <li>Conducted outbound outreach via calls, emails, and LinkedIn to connect with decision-makers</li>
-                            <li>Qualified leads by evaluating business size, challenges, and readiness for digital adoption</li>
-                            <li>Supported account management efforts by maintaining strong client relationships</li>
-                            <li>Maintained accurate CRM records and ensured smooth handoffs to the sales team</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Experience Item 4 -->
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div class="experience-header-left">
-                            <h3 class="experience-title">Sales Development Representative</h3>
-                            <p class="experience-company">Opal Trading</p>
-                            <p class="experience-location">Ajman, UAE</p>
-                        </div>
-                        <span class="experience-period">April 2012 - December 2021</span>
-                    </div>
-                    <div class="experience-details">
-                        <ul>
-                            <li>Developed and executed effective sales strategies to achieve and exceed revenue targets</li>
-                            <li>Researched and targeted businesses in need of Opal Trading's products and services</li>
-                            <li>Conducted prospecting through cold calls, emails, and LinkedIn outreach to generate leads</li>
-                            <li>Assessed client needs, procurement timelines, and identified key decision-makers</li>
-                            <li>Managed sales pipeline, updated CRM, and tracked engagement metrics</li>
-                            <li>Provided continuous feedback to enhance team performance and drive business growth</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div class="skill-bar-item reveal">
+          <div class="skill-bar-header"><span class="skill-bar-name">Outbound Prospecting & Cold Calling</span><span class="skill-bar-pct">95%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="95"></div></div>
         </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">Core Competencies</div>
-                <h2 class="section-title">Skills & Expertise</h2>
-                <p class="section-subtitle">Key strengths that drive business development success and client acquisition</p>
-            </div>
-            
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Sales & Business Development</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag highlight">Negotiation</span>
-                        <span class="skill-tag highlight">Prospecting</span>
-                        <span class="skill-tag">Lead Generation</span>
-                        <span class="skill-tag">Account Management</span>
-                        <span class="skill-tag">Client Acquisition</span>
-                        <span class="skill-tag">Sales Strategy</span>
-                        <span class="skill-tag">Relationship Building</span>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>Technical & Tools</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag highlight">CRM Systems</span>
-                        <span class="skill-tag">SaaS Solutions</span>
-                        <span class="skill-tag">Market Analysis</span>
-                        <span class="skill-tag">Product Demonstrations</span>
-                        <span class="skill-tag">Workflow Automation</span>
-                        <span class="skill-tag">Microsoft Office</span>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>Professional Skills</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag highlight">Strategic Communication</span>
-                        <span class="skill-tag highlight">Networking</span>
-                        <span class="skill-tag highlight">Problem Solving</span>
-                        <span class="skill-tag">Market Research</span>
-                        <span class="skill-tag">Cross-functional Collaboration</span>
-                        <span class="skill-tag">Presentation Skills</span>
-                    </div>
-                </div>
-            </div>
+        <div class="skill-bar-item reveal">
+          <div class="skill-bar-header"><span class="skill-bar-name">SaaS Sales & Solution Selling</span><span class="skill-bar-pct">92%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="92"></div></div>
         </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">Academic Background</div>
-                <h2 class="section-title">Education & Languages</h2>
-                <p class="section-subtitle">Formal education and linguistic capabilities supporting professional success</p>
-            </div>
-            
-            <div class="education-list">
-                <div class="education-item">
-                    <h3>Bachelor of Commerce</h3>
-                    <p class="education-institution">Bangalore University</p>
-                    <p class="education-year">Graduated: 2009</p>
-                </div>
-                
-                <div class="education-item">
-                    <h3>Diploma in Business Administration</h3>
-                    <p class="education-institution">Faculty of Business Studies, Sudan</p>
-                    <p class="education-year">Completed: 2007</p>
-                </div>
-                
-                <div class="education-item">
-                    <h3>Languages</h3>
-                    <p class="education-institution">Fluent Communication</p>
-                    <div class="skill-tags" style="margin-top: 1rem;">
-                        <span class="skill-tag highlight">English (Fluent)</span>
-                        <span class="skill-tag highlight">Arabic (Native)</span>
-                    </div>
-                </div>
-            </div>
+        <div class="skill-bar-item reveal">
+          <div class="skill-bar-header"><span class="skill-bar-name">Negotiation & Deal Closing</span><span class="skill-bar-pct">90%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="90"></div></div>
         </div>
-    </section>
-
-    <!-- Interactive IQ Game Section -->
-    <section id="game" style="background: linear-gradient(135deg, var(--light-gray) 0%, var(--body-bg) 100%);">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">Brain Teaser</div>
-                <h2 class="section-title">Pattern IQ Challenge</h2>
-                <p class="section-subtitle">Test your logical reasoning with pattern recognition puzzles. New puzzle every reload!</p>
-            </div>
-            
-            <div class="game-container">
-                <div class="game-box">
-                    <div class="game-header">
-                        <div>
-                            <div class="score-display" style="font-size: 1.2rem; margin-bottom: 0.5rem;">
-                                Score: <span id="iqScore">0</span>
-                            </div>
-                            <div style="font-size: 0.9rem; color: var(--text-light);">
-                                <i class="fas fa-brain"></i> Puzzle: <span id="puzzleNumber">1</span>/5
-                            </div>
-                        </div>
-                        <div class="high-score" style="margin: 0;">
-                            <i class="fas fa-trophy"></i>
-                            <span>High IQ: <span id="iqHighScore">0</span></span>
-                        </div>
-                    </div>
-                    
-                    <div class="puzzle-container">
-                        <h3 style="margin-bottom: 1rem; font-size: 1.1rem; color: var(--text-color);" id="puzzleQuestion">
-                            Complete the pattern:
-                        </h3>
-                        
-                        <div class="pattern-grid" id="patternGrid">
-                            <!-- Pattern cells will be generated here -->
-                        </div>
-                        
-                        <div class="options-container" id="optionsContainer">
-                            <!-- Options will be generated here -->
-                        </div>
-                    </div>
-                    
-                    <div class="feedback-container" id="feedbackContainer">
-                        <!-- Feedback will appear here -->
-                    </div>
-                    
-                    <div class="game-controls" style="display: flex; gap: 1rem; justify-content: center;">
-                        <button id="nextPuzzleBtn" class="btn btn-primary" style="display: none;">
-                            <i class="fas fa-forward"></i> Next Puzzle
-                        </button>
-                        <button id="hintBtn" class="btn btn-secondary">
-                            <i class="fas fa-lightbulb"></i> Get Hint
-                        </button>
-                        <button id="resetGameBtn" class="btn btn-secondary">
-                            <i class="fas fa-redo"></i> New Game
-                        </button>
-                    </div>
-                    
-                    <div class="iq-level">
-                        <div style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.25rem;">
-                            Your Current IQ Level:
-                        </div>
-                        <div style="font-size: 1.3rem; font-weight: 700; color: var(--primary-color);" id="iqLevel">
-                            Average (90-110)
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="skill-bar-item reveal">
+          <div class="skill-bar-header"><span class="skill-bar-name">CRM Management (HubSpot)</span><span class="skill-bar-pct">88%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="88"></div></div>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">Get In Touch</div>
-                <h2 class="section-title">Contact Information</h2>
-                <p class="section-subtitle">Available for new opportunities and strategic business discussions</p>
-            </div>
-            
-            <div class="contact-container">
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <h3>Phone</h3>
-                    <p><a href="tel:+971551847343">+971 55 184 7343</a></p>
-                    <p style="font-size: 0.85rem; color: var(--gray-color); margin-top: 5px;">Click to call</p>
-                </div>
-                
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3>Email</h3>
-                    <p><a href="mailto:sami.abdoun@gmail.com?subject=Opportunity%20Discussion&body=Dear%20Sami,%0D%0A%0D%0AI%20came%20across%20your%20CV%20and%20would%20like%20to%20discuss%20opportunities.%0D%0A%0D%0ABest%20regards,">
-                        sami.abdoun@gmail.com
-                    </a></p>
-                    <p style="font-size: 0.85rem; color: var(--gray-color); margin-top: 5px;">Click to email me directly</p>
-                </div>
-                
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fab fa-linkedin-in"></i>
-                    </div>
-                    <h3>LinkedIn</h3>
-                    <p><a href="https://www.linkedin.com/in/sami-abdoun/" target="_blank">linkedin.com/in/sami-abdoun</a></p>
-                    <p style="font-size: 0.85rem; color: var(--gray-color); margin-top: 5px;">View my professional profile</p>
-                </div>
-                
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <h3>Location & Focus</h3>
-                    <p>Based in Dubai, UAE</p>
-                    <p>Markets: UAE & KSA</p>
-                    <p style="font-size: 0.85rem; color: var(--gray-color); margin-top: 5px;">Available for local & remote opportunities</p>
-                </div>
-            </div>
-            
-            <!-- Quick Contact Buttons -->
-            <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
-                <h3 style="margin-bottom: 1.5rem;">Quick Contact</h3>
-                <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-                    <a href="mailto:sami.abdoun@gmail.com?subject=Job%20Opportunity&body=Dear%20Sami,%0D%0A%0D%0AI%20have%20a%20job%20opportunity%20I'd%20like%20to%20discuss%20with%20you.%0D%0A%0D%0ABest%20regards," class="btn btn-primary">
-                        <i class="fas fa-briefcase"></i> Discuss Job Opportunity
-                    </a>
-                    <a href="mailto:sami.abdoun@gmail.com?subject=Business%20Partnership&body=Dear%20Sami,%0D%0A%0D%0AI'm%20interested%20in%20discussing%20a%20potential%20business%20partnership.%0D%0A%0D%0ABest%20regards," class="btn btn-secondary">
-                        <i class="fas fa-handshake"></i> Discuss Partnership
-                    </a>
-                    <a href="mailto:sami.abdoun@gmail.com?subject=General%20Inquiry&body=Dear%20Sami,%0D%0A%0D%0AI%20would%20like%20to%20connect%20with%20you%20regarding%20a%20general%20inquiry.%0D%0A%0D%0ABest%20regards," class="btn btn-secondary">
-                        <i class="fas fa-question-circle"></i> General Inquiry
-                    </a>
-                </div>
-            </div>
+      </div>
+      <div class="skill-bar-group">
+        <div class="skill-bar-item reveal">
+          <div class="skill-bar-header"><span class="skill-bar-name">Account Growth & Upselling</span><span class="skill-bar-pct">90%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="90"></div></div>
         </div>
-    </section>
-
-    <!-- Send Me a Message Section -->
-    <section id="message" class="message-section">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">Let's Connect</div>
-                <h2 class="section-title">Send Me a Message</h2>
-                <p class="section-subtitle">Fill out the form below and I'll get back to you within 24 hours.</p>
-            </div>
-            
-            <div class="form-container">
-                <form class="message-form" action="https://formspree.io/f/meezdzgo" method="POST" id="contactForm">
-                    <!-- Formspree Configuration -->
-                    <input type="hidden" name="_subject" value="New Message from CV Website - Sami Abdoun">
-                    <input type="text" name="_gotcha" style="display:none">
-                    
-                    <div class="form-group">
-                        <label for="name">Full Name *</label>
-                        <input type="text" id="name" name="name" class="form-control" placeholder="Enter your full name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Your Email Address *</label>
-                        <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email address" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="company">Company (Optional)</label>
-                        <input type="text" id="company" name="company" class="form-control" placeholder="Enter your company name">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="subject">Subject *</label>
-                        <input type="text" id="subject" name="subject" class="form-control" placeholder="What is this regarding?" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Your Message *</label>
-                        <textarea id="message" name="message" class="form-control" placeholder="Type your message here..." required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn-submit">
-                        <i class="fas fa-paper-plane"></i> Send Message
-                    </button>
-                    
-                    <div class="form-note">
-                        <p><i class="fas fa-check-circle"></i> Your message will be sent directly to my inbox</p>
-                        <p><i class="fas fa-clock"></i> I typically respond within 24 hours</p>
-                    </div>
-                </form>
-                
-                <!-- Success Message (hidden by default) -->
-                <div id="success-message" class="success-message" style="display: none;">
-                    <i class="fas fa-check-circle"></i>
-                    <h3>Thank You!</h3>
-                    <p>Your message has been sent successfully. I'll get back to you within 24 hours.</p>
-                </div>
-            </div>
+        <div class="skill-bar-item reveal">
+          <div class="skill-bar-header"><span class="skill-bar-name">Market Research & Strategy</span><span class="skill-bar-pct">85%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="85"></div></div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <a href="#" class="footer-logo">Sami Abdoun</a>
-                <p class="footer-tagline">Business Development Professional specializing in B2B SaaS solutions across UAE and KSA markets</p>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/sami-abdoun/" target="_blank" class="social-link">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="mailto:sami.abdoun@gmail.com" class="social-link">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="tel:+971551847343" class="social-link">
-                        <i class="fas fa-phone"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 Sami Abdoun. All rights reserved.</p>
-            </div>
+        <div class="skill-bar-item reveal">
+          <div class="skill-bar-header"><span class="skill-bar-name">Lead Qualification & Sales Cycle</span><span class="skill-bar-pct">93%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="93"></div></div>
         </div>
-    </footer>
+        <div class="skill-bar-item reveal">
+          <div class="skill-bar-header"><span class="skill-bar-name">Relationship Building & Networking</span><span class="skill-bar-pct">92%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="92"></div></div>
+        </div>
+        <div class="skill-bar-item reveal">
+          <div class="skill-bar-header"><span class="skill-bar-name">Demo Delivery & Presentations</span><span class="skill-bar-pct">88%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="88"></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="chips-section reveal">
+      <div class="chips-title">Tools & Technologies</div>
+      <div class="chip-cloud">
+        <span class="chip">HubSpot CRM</span>
+        <span class="chip">LinkedIn Sales Navigator</span>
+        <span class="chip">Apollo.io</span>
+        <span class="chip">Lusha</span>
+        <span class="chip">RMM Solutions</span>
+        <span class="chip">SaaS Platforms</span>
+        <span class="chip">Holiday Home PMS</span>
+        <span class="chip">Construction ERP (Archdesk)</span>
+        <span class="chip">K-12 EdTech</span>
+        <span class="chip">Outbound Sequencing</span>
+        <span class="chip">Market Expansion MEA</span>
+        <span class="chip">Commodity Trading</span>
+        <span class="chip">Import/Export</span>
+        <span class="chip">GCC Markets</span>
+        <span class="chip">Saudi Arabia</span>
+        <span class="chip">UAE Markets</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script>
-        // Dark Mode Toggle
-        const themeToggle = document.getElementById('themeToggle');
-        const body = document.body;
-        
-        // Check for saved theme preference
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        if (savedTheme === 'dark') {
-            body.classList.add('dark-mode');
-            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-        }
-        
-        themeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            
-            // Update icon
-            if (body.classList.contains('dark-mode')) {
-                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-                localStorage.setItem('theme', 'dark');
-            } else {
-                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-                localStorage.setItem('theme', 'light');
-            }
-        });
-        
-        // Mobile menu toggle - FIXED
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navLinks = document.getElementById('navLinks');
-        
-        mobileMenuBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            navLinks.classList.toggle('active');
-            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
-                ? '<i class="fas fa-times"></i>' 
-                : '<i class="fas fa-bars"></i>';
-        });
-        
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-                navLinks.classList.remove('active');
-                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-            }
-        });
-        
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-                
-                // Update active class
-                document.querySelectorAll('.nav-links a').forEach(item => {
-                    item.classList.remove('active');
-                });
-                link.classList.add('active');
-            });
-        });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 100,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-        
-        // Add scroll effect to header
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
-            } else {
-                header.style.boxShadow = 'var(--shadow)';
-            }
-        });
-        
-        // Set active navigation based on scroll position
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.nav-links a');
-            
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= (sectionTop - 150)) {
-                    current = section.getAttribute('id');
-                }
-            });
-            
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
-        });
-        
-        // Contact Form Handling
-        const contactForm = document.getElementById('contactForm');
-        const successMessage = document.getElementById('success-message');
-        
-        // Check if form was submitted successfully (from URL parameter)
-        const urlParams = new URLSearchParams(window.location.search);
-        if (urlParams.get('success') === 'true') {
-            // Show success message
-            successMessage.style.display = 'block';
-            // Scroll to success message
-            successMessage.scrollIntoView({ behavior: 'smooth' });
-        }
-        
-        // Add form submission feedback
-        contactForm.addEventListener('submit', function(e) {
-            // Show loading state
-            const submitBtn = this.querySelector('.btn-submit');
-            const originalText = submitBtn.innerHTML;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-            submitBtn.disabled = true;
-        });
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div style="max-width:1200px;margin:0 auto;">
+    <p class="section-label reveal">Career</p>
+    <h2 class="section-title reveal">Work <span>Experience</span></h2>
+    <div class="timeline">
 
-        // INTERACTIVE IQ GAME LOGIC
-        const patternGrid = document.getElementById('patternGrid');
-        const optionsContainer = document.getElementById('optionsContainer');
-        const feedbackContainer = document.getElementById('feedbackContainer');
-        const iqScoreDisplay = document.getElementById('iqScore');
-        const puzzleNumberDisplay = document.getElementById('puzzleNumber');
-        const iqHighScoreDisplay = document.getElementById('iqHighScore');
-        const iqLevelDisplay = document.getElementById('iqLevel');
-        const nextPuzzleBtn = document.getElementById('nextPuzzleBtn');
-        const hintBtn = document.getElementById('hintBtn');
-        const resetGameBtn = document.getElementById('resetGameBtn');
-        const puzzleQuestion = document.getElementById('puzzleQuestion');
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="job-card reveal">
+          <div class="job-header">
+            <div class="job-title">Senior Business Development Manager</div>
+            <div class="job-date">Mar 2025 – Feb 2026</div>
+          </div>
+          <div class="job-company">Mr. Alfred PMS</div>
+          <div class="job-location">📍 Dubai, UAE</div>
+          <ul class="job-desc">
+            <li>Conducted outbound calls daily to generate, qualify, and grow the sales pipeline</li>
+            <li>Collaborated with marketing to align campaigns with market insights and improve lead generation effectiveness</li>
+            <li>Managed end-to-end client engagement including demos, account growth, retention, and new business opportunities in holiday home SaaS operators</li>
+          </ul>
+          <div class="job-badges">
+            <span class="badge">30–45 Calls/Day</span>
+            <span class="badge cyan">20 Demos/Week</span>
+            <span class="badge amber">$630K Pipeline</span>
+            <span class="badge">9 Deals Closed</span>
+            <span class="badge cyan">$130K ACV</span>
+          </div>
+        </div>
+      </div>
 
-        // Game state
-        let currentScore = 0;
-        let currentPuzzle = 0;
-        let totalPuzzles = 5;
-        let puzzles = [];
-        let currentPattern = null;
-        let highIQScore = localStorage.getItem('iqHighScore') || 0;
-        let hintsUsed = 0;
-        let correctAnswers = 0;
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="job-card reveal">
+          <div class="job-header">
+            <div class="job-title">Inside Sales Representative</div>
+            <div class="job-date">Jun 2023 – Feb 2025</div>
+          </div>
+          <div class="job-company">Trio</div>
+          <div class="job-location">📍 Dubai, UAE</div>
+          <ul class="job-desc">
+            <li>Built and maintained strong relationships with existing and potential clients in the K-12 education space</li>
+            <li>Conducted outbound prospecting to engage schools needing monitoring and RMM solutions across the GCC</li>
+            <li>Qualified leads, managed pipeline, and coordinated handoff to Account Executives</li>
+            <li>Acquired and expanded school partnerships, closed deals, and drove upsells</li>
+          </ul>
+          <div class="job-badges">
+            <span class="badge">7 Demos/Week</span>
+            <span class="badge cyan">Full Sales Cycle</span>
+            <span class="badge amber">$80K Multi-Campus Deal</span>
+            <span class="badge">$700K Pipeline</span>
+            <span class="badge cyan">7 Campuses / 700 Students</span>
+          </div>
+        </div>
+      </div>
 
-        // Initialize high score
-        iqHighScoreDisplay.textContent = highIQScore;
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="job-card reveal">
+          <div class="job-header">
+            <div class="job-title">Business Development Representative</div>
+            <div class="job-date">Dec 2021 – Feb 2023</div>
+          </div>
+          <div class="job-company">Archdesk</div>
+          <div class="job-location">📍 Dubai, UAE</div>
+          <ul class="job-desc">
+            <li>Prospected and engaged construction firms across Saudi Arabia to generate new business opportunities</li>
+            <li>Identified key accounts and conducted outbound outreach to connect with decision-makers</li>
+            <li>Maintained accurate CRM records and coordinated handoffs to the sales team</li>
+            <li>Compiled market research and competitor insights to inform strategic decisions</li>
+          </ul>
+          <div class="job-badges">
+            <span class="badge">30–45 Calls/Day</span>
+            <span class="badge cyan">15 Demos/Week</span>
+            <span class="badge amber">$1.5M Pipeline</span>
+            <span class="badge">Saudi Arabia Focus</span>
+          </div>
+        </div>
+      </div>
 
-        // Pattern types
-        const patternTypes = [
-            'number-sequence',
-            'shape-rotation',
-            'color-progression',
-            'symbol-pattern',
-            'matrix-logic'
-        ];
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="job-card reveal">
+          <div class="job-header">
+            <div class="job-title">Sales Development Representative</div>
+            <div class="job-date">Apr 2012 – Dec 2021</div>
+          </div>
+          <div class="job-company">Opal Trading</div>
+          <div class="job-location">📍 Ajman, UAE</div>
+          <ul class="job-desc">
+            <li>Managed commodity trading operations in import/export across international markets, ensuring efficient sourcing, procurement, and distribution of goods</li>
+            <li>Coordinated end-to-end trade logistics including supplier negotiation, documentation, shipping, and customs clearance</li>
+            <li>Developed and maintained relationships with global suppliers and buyers to optimise pricing and expand trading opportunities</li>
+          </ul>
+          <div class="job-badges">
+            <span class="badge amber">58M AED Total Transactions</span>
+            <span class="badge">International Markets</span>
+            <span class="badge cyan">Global Supplier Network</span>
+          </div>
+        </div>
+      </div>
 
-        // Generate puzzles
-        function generatePuzzles() {
-            puzzles = [];
-            for (let i = 0; i < totalPuzzles; i++) {
-                puzzles.push(generatePuzzle(i));
-            }
-        }
+    </div>
+  </div>
+</section>
 
-        // Generate a single puzzle
-        function generatePuzzle(level) {
-            const patternType = patternTypes[Math.floor(Math.random() * patternTypes.length)];
-            
-            switch(patternType) {
-                case 'number-sequence':
-                    return generateNumberSequence(level);
-                case 'shape-rotation':
-                    return generateShapeRotation(level);
-                case 'color-progression':
-                    return generateColorProgression(level);
-                case 'symbol-pattern':
-                    return generateSymbolPattern(level);
-                case 'matrix-logic':
-                    return generateMatrixLogic(level);
-                default:
-                    return generateNumberSequence(level);
-            }
-        }
+<!-- PROJECTS / KEY WINS -->
+<section id="projects">
+  <div style="max-width:1200px;margin:0 auto;">
+    <p class="section-label reveal">Highlights</p>
+    <h2 class="section-title reveal">Notable <span>Achievements</span></h2>
+    <div class="projects-grid">
 
-        // Number sequence pattern
-        function generateNumberSequence(level) {
-            const sequences = [
-                { pattern: [1, 3, 5, 7, 9], answer: 11, rule: '+2' },
-                { pattern: [2, 4, 8, 16, 32], answer: 64, rule: '×2' },
-                { pattern: [1, 1, 2, 3, 5], answer: 8, rule: 'Fibonacci' },
-                { pattern: [3, 6, 9, 12, 15], answer: 18, rule: '+3' },
-                { pattern: [5, 10, 15, 20, 25], answer: 30, rule: '+5' },
-                { pattern: [100, 81, 64, 49, 36], answer: 25, rule: 'Square numbers' },
-                { pattern: [1, 4, 9, 16, 25], answer: 36, rule: 'Squares' },
-                { pattern: [2, 3, 5, 7, 11], answer: 13, rule: 'Prime numbers' }
-            ];
-            
-            const seq = sequences[Math.floor(Math.random() * sequences.length)];
-            const options = generateOptions(seq.answer, 'number');
-            
-            return {
-                type: 'number-sequence',
-                question: "What number completes the sequence?",
-                pattern: seq.pattern,
-                answer: seq.answer,
-                options: options,
-                hint: `The pattern is: ${seq.rule}`
-            };
-        }
+      <div class="project-card reveal">
+        <span class="project-emoji">🏫</span>
+        <div class="project-name">Multi-Campus School Deal — UAE</div>
+        <div class="project-desc">Closed a landmark deal at Trio covering 7 campuses and 700 students, delivering $80K in contract value and establishing a flagship K-12 reference account in the GCC.</div>
+        <div class="project-tags">
+          <span class="project-tag">EdTech SaaS</span>
+          <span class="project-tag">$80K ACV</span>
+          <span class="project-tag">UAE</span>
+          <span class="project-tag">7 Campuses</span>
+        </div>
+      </div>
 
-        // Shape rotation pattern
-        function generateShapeRotation(level) {
-            const shapes = ['▲', '▶', '▼', '◀'];
-            const startIdx = Math.floor(Math.random() * shapes.length);
-            const pattern = [];
-            
-            for (let i = 0; i < 4; i++) {
-                pattern.push(shapes[(startIdx + i) % shapes.length]);
-            }
-            
-            const answer = shapes[(startIdx + 4) % shapes.length];
-            const options = generateOptions(answer, 'shape');
-            
-            return {
-                type: 'shape-rotation',
-                question: "Which shape comes next?",
-                pattern: pattern,
-                answer: answer,
-                options: options,
-                hint: "The shapes are rotating clockwise"
-            };
-        }
+      <div class="project-card reveal">
+        <span class="project-emoji">🚀</span>
+        <div class="project-name">$1.5M Sales Pipeline — Archdesk</div>
+        <div class="project-desc">Built and managed a $1.5 million sales pipeline at Archdesk through aggressive outbound prospecting targeting construction firms across Saudi Arabia, generating 15 demos weekly.</div>
+        <div class="project-tags">
+          <span class="project-tag">Construction ERP</span>
+          <span class="project-tag">$1.5M Pipeline</span>
+          <span class="project-tag">Saudi Arabia</span>
+          <span class="project-tag">Outbound</span>
+        </div>
+      </div>
 
-        // Color progression pattern
-        function generateColorProgression(level) {
-            const colors = ['🔴', '🟡', '🔵', '🟢', '🟠', '🟣'];
-            const startIdx = Math.floor(Math.random() * colors.length);
-            const step = Math.floor(Math.random() * 2) + 1;
-            const pattern = [];
-            
-            for (let i = 0; i < 4; i++) {
-                pattern.push(colors[(startIdx + i * step) % colors.length]);
-            }
-            
-            const answer = colors[(startIdx + 4 * step) % colors.length];
-            const options = generateOptions(answer, 'color');
-            
-            return {
-                type: 'color-progression',
-                question: "Which color comes next?",
-                pattern: pattern,
-                answer: answer,
-                options: options,
-                hint: `The pattern skips ${step === 1 ? 'one color' : 'two colors'} each time`
-            };
-        }
+      <div class="project-card reveal">
+        <span class="project-emoji">💼</span>
+        <div class="project-name">9 Deals in 6 Months — Mr. Alfred PMS</div>
+        <div class="project-desc">Closed 9 deals within just 6 months at Mr. Alfred PMS, generating $130K in annual contract value and a $630K qualified pipeline, while conducting 20 demos per week in the holiday home SaaS space.</div>
+        <div class="project-tags">
+          <span class="project-tag">Holiday Home SaaS</span>
+          <span class="project-tag">$130K ACV</span>
+          <span class="project-tag">9 Deals</span>
+          <span class="project-tag">6 Months</span>
+        </div>
+      </div>
 
-        // Symbol pattern
-        function generateSymbolPattern(level) {
-            const symbols = ['★', '■', '●', '◆', '▲', '♥'];
-            const pattern = [];
-            const usedSymbols = new Set();
-            
-            for (let i = 0; i < 4; i++) {
-                const symbol = symbols[i % 3];
-                pattern.push(symbol);
-                usedSymbols.add(symbol);
-            }
-            
-            const answer = symbols[pattern.length % 3];
-            const options = generateOptions(answer, 'symbol');
-            
-            return {
-                type: 'symbol-pattern',
-                question: "Which symbol comes next?",
-                pattern: pattern,
-                answer: answer,
-                options: options,
-                hint: "The pattern repeats every three symbols"
-            };
-        }
+      <div class="project-card reveal">
+        <span class="project-emoji">🌍</span>
+        <div class="project-name">58M AED Commodity Trading</div>
+        <div class="project-desc">Achieved 58 million AED in total transaction value over nearly a decade at Opal Trading, managing large-scale international import/export operations with global supplier and buyer networks.</div>
+        <div class="project-tags">
+          <span class="project-tag">Commodity Trading</span>
+          <span class="project-tag">58M AED</span>
+          <span class="project-tag">International</span>
+          <span class="project-tag">Import/Export</span>
+        </div>
+      </div>
 
-        // Matrix logic pattern
-        function generateMatrixLogic(level) {
-            const patterns = [
-                { 
-                    matrix: [[1, 2], [3, 4]], 
-                    answer: 5,
-                    question: "Complete the 3x3 matrix (bottom right corner):"
-                },
-                { 
-                    matrix: [[2, 4, 6], [8, 10, 12]], 
-                    answer: 14,
-                    question: "Complete the pattern in the last row:"
-                }
-            ];
-            
-            const pattern = patterns[Math.floor(Math.random() * patterns.length)];
-            const options = generateOptions(pattern.answer, 'number');
-            
-            return {
-                type: 'matrix-logic',
-                question: pattern.question,
-                pattern: pattern.matrix.flat(),
-                answer: pattern.answer,
-                options: options,
-                hint: "Look for a consistent mathematical operation between numbers"
-            };
-        }
+      <div class="project-card reveal">
+        <span class="project-emoji">📊</span>
+        <div class="project-name">$700K GCC Pipeline — Trio</div>
+        <div class="project-desc">Built and managed a $700K qualified pipeline at Trio, engaging K-12 institutions across the GCC with RMM and monitoring solutions through consultative, solution-driven outreach.</div>
+        <div class="project-tags">
+          <span class="project-tag">K-12 EdTech</span>
+          <span class="project-tag">GCC</span>
+          <span class="project-tag">$700K Pipeline</span>
+          <span class="project-tag">RMM</span>
+        </div>
+      </div>
 
-        // Generate answer options
-        function generateOptions(correctAnswer, type) {
-            const options = [correctAnswer];
-            
-            while (options.length < 6) {
-                let wrongOption;
-                
-                if (type === 'number') {
-                    wrongOption = correctAnswer + (Math.random() > 0.5 ? 1 : -1) * Math.floor(Math.random() * 10) + 1;
-                    if (wrongOption < 0) wrongOption = Math.abs(wrongOption);
-                } else {
-                    const allOptions = {
-                        shape: ['▲', '▶', '▼', '◀', '●', '■'],
-                        color: ['🔴', '🟡', '🔵', '🟢', '🟠', '🟣'],
-                        symbol: ['★', '■', '●', '◆', '▲', '♥']
-                    };
-                    
-                    const available = allOptions[type];
-                    wrongOption = available[Math.floor(Math.random() * available.length)];
-                }
-                
-                if (!options.includes(wrongOption)) {
-                    options.push(wrongOption);
-                }
-            }
-            
-            return shuffleArray(options);
-        }
+      <div class="project-card reveal">
+        <span class="project-emoji">🔗</span>
+        <div class="project-name">Full-Cycle Sales Ownership</div>
+        <div class="project-desc">Demonstrated consistent ability to own the complete sales cycle — from cold outreach and lead qualification through demos, negotiations, and closing — across SaaS, trading, and enterprise markets.</div>
+        <div class="project-tags">
+          <span class="project-tag">Full Sales Cycle</span>
+          <span class="project-tag">MEA Region</span>
+          <span class="project-tag">Multi-Industry</span>
+          <span class="project-tag">SaaS + Trading</span>
+        </div>
+      </div>
 
-        // Shuffle array utility
-        function shuffleArray(array) {
-            const shuffled = [...array];
-            for (let i = shuffled.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-            }
-            return shuffled;
-        }
+    </div>
+  </div>
+</section>
 
-        // Display current puzzle
-        function displayPuzzle(puzzleIndex) {
-            currentPattern = puzzles[puzzleIndex];
-            patternGrid.innerHTML = '';
-            optionsContainer.innerHTML = '';
-            feedbackContainer.innerHTML = '';
-            
-            puzzleQuestion.textContent = currentPattern.question;
-            
-            currentPattern.pattern.forEach((item, index) => {
-                const cell = document.createElement('div');
-                cell.className = 'pattern-cell';
-                cell.style.cssText = `
-                    background: var(--card-bg);
-                    border: 2px solid var(--border-color);
-                    border-radius: var(--border-radius);
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    font-size: 1.5rem;
-                    height: 60px;
-                    aspect-ratio: 1;
-                `;
-                
-                if (index === currentPattern.pattern.length - 1) {
-                    cell.style.border = '2px dashed var(--primary-color)';
-                    cell.style.background = 'rgba(37, 99, 235, 0.1)';
-                    cell.textContent = '?';
-                } else {
-                    cell.textContent = item;
-                }
-                
-                patternGrid.appendChild(cell);
-            });
-            
-            currentPattern.options.forEach((option, index) => {
-                const optionBtn = document.createElement('button');
-                optionBtn.className = 'option-btn';
-                optionBtn.style.cssText = `
-                    background: var(--card-bg);
-                    border: 2px solid var(--border-color);
-                    border-radius: var(--border-radius);
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    font-size: 1.2rem;
-                    height: 60px;
-                    cursor: pointer;
-                    transition: all 0.2s ease;
-                `;
-                optionBtn.textContent = option;
-                
-                optionBtn.addEventListener('click', () => checkAnswer(option));
-                optionBtn.addEventListener('mouseenter', () => {
-                    optionBtn.style.transform = 'translateY(-2px)';
-                    optionBtn.style.boxShadow = 'var(--shadow)';
-                });
-                optionBtn.addEventListener('mouseleave', () => {
-                    optionBtn.style.transform = 'translateY(0)';
-                    optionBtn.style.boxShadow = 'none';
-                });
-                
-                optionsContainer.appendChild(optionBtn);
-            });
-            
-            puzzleNumberDisplay.textContent = puzzleIndex + 1;
-            nextPuzzleBtn.style.display = 'none';
-        }
+<!-- EDUCATION -->
+<section id="education">
+  <div style="max-width:1200px;margin:0 auto;">
+    <p class="section-label reveal">Background</p>
+    <h2 class="section-title reveal">Education & <span>Languages</span></h2>
+    <div class="edu-grid">
+      <div class="edu-card reveal left">
+        <div class="edu-icon">🎓</div>
+        <div class="edu-degree">Bachelor of Commerce</div>
+        <div class="edu-school">Bangalore University, India</div>
+        <div class="edu-year">Graduated 2009</div>
+      </div>
+      <div class="edu-card reveal right">
+        <div class="edu-icon">📜</div>
+        <div class="edu-degree">Diploma in Business Administration</div>
+        <div class="edu-school">Faculty of Business Studies, Sudan</div>
+        <div class="edu-year">Graduated 2007</div>
+      </div>
+    </div>
+    <div class="langs-section reveal">
+      <div class="langs-title">Languages</div>
+      <div class="lang-badges">
+        <div class="lang-badge">🌐 English — Fluent</div>
+        <div class="lang-badge">🌙 Arabic — Mother Tongue</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        // Check answer
-        function checkAnswer(selectedOption) {
-            const isCorrect = selectedOption == currentPattern.answer;
-            const optionBtns = document.querySelectorAll('.option-btn');
-            
-            optionBtns.forEach(btn => {
-                btn.disabled = true;
-                
-                if (btn.textContent == currentPattern.answer) {
-                    btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
-                    btn.style.color = 'white';
-                    btn.style.borderColor = '#10b981';
-                }
-                
-                if (btn.textContent == selectedOption && !isCorrect) {
-                    btn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
-                    btn.style.color = 'white';
-                    btn.style.borderColor = '#ef4444';
-                }
-            });
-            
-            if (isCorrect) {
-                const points = 10 - hintsUsed * 2;
-                currentScore += Math.max(points, 1);
-                correctAnswers++;
-                
-                feedbackContainer.innerHTML = `
-                    <div style="color: #10b981; font-weight: 600;">
-                        <i class="fas fa-check-circle"></i> Correct! +${points} points
-                    </div>
-                    <div style="font-size: 0.9rem; color: var(--text-light); margin-top: 0.5rem;">
-                        Well done! ${currentPuzzle < totalPuzzles - 1 ? 'Ready for the next puzzle?' : 'Game complete!'}
-                    </div>
-                `;
-                
-                if (currentPuzzle < totalPuzzles - 1) {
-                    nextPuzzleBtn.style.display = 'inline-flex';
-                } else {
-                    endGame();
-                }
-            } else {
-                feedbackContainer.innerHTML = `
-                    <div style="color: #ef4444; font-weight: 600;">
-                        <i class="fas fa-times-circle"></i> Incorrect!
-                    </div>
-                    <div style="font-size: 0.9rem; color: var(--text-light); margin-top: 0.5rem;">
-                        The correct answer was: ${currentPattern.answer}
-                    </div>
-                `;
-                
-                if (currentPuzzle < totalPuzzles - 1) {
-                    nextPuzzleBtn.style.display = 'inline-flex';
-                } else {
-                    endGame();
-                }
-            }
-            
-            updateScoreDisplay();
-            hintsUsed = 0;
-        }
+<!-- CONTACT -->
+<section id="contact">
+  <div style="max-width:1200px;margin:0 auto;">
+    <p class="section-label reveal">Connect</p>
+    <h2 class="section-title reveal">Get In <span>Touch</span></h2>
+    <div class="contact-grid">
+      <div class="contact-cards">
+        <div class="contact-card reveal left">
+          <div class="contact-icon">📧</div>
+          <div>
+            <div class="contact-info-label">Email</div>
+            <div class="contact-info-val"><a href="mailto:sami.abdoun@gmail.com">sami.abdoun@gmail.com</a></div>
+          </div>
+        </div>
+        <div class="contact-card reveal left">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-info-label">Location</div>
+            <div class="contact-info-val">Dubai, UAE</div>
+          </div>
+        </div>
+        <div class="contact-card reveal left">
+          <div class="contact-icon">💼</div>
+          <div>
+            <div class="contact-info-label">LinkedIn</div>
+            <div class="contact-info-val"><a href="https://www.linkedin.com/in/sami-abdoun/" target="_blank">linkedin.com/in/sami-abdoun</a></div>
+          </div>
+        </div>
+        <div class="contact-card reveal left">
+          <div class="contact-icon">✅</div>
+          <div>
+            <div class="contact-info-label">Availability</div>
+            <div class="contact-info-val">Open to new opportunities</div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-visual reveal right">
+        <div class="contact-avatar-wrap">
+          <div class="ripple"></div>
+          <div class="ripple"></div>
+          <div class="ripple"></div>
+          <div class="contact-avatar">SA</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        // Show hint
-        function showHint() {
-            if (hintsUsed < 2) {
-                hintsUsed++;
-                feedbackContainer.innerHTML = `
-                    <div style="color: #f59e0b; font-weight: 600;">
-                        <i class="fas fa-lightbulb"></i> Hint: ${currentPattern.hint}
-                    </div>
-                    <div style="font-size: 0.9rem; color: var(--text-light); margin-top: 0.5rem;">
-                        Using hint will reduce points earned for correct answer
-                    </div>
-                `;
-            } else {
-                feedbackContainer.innerHTML = `
-                    <div style="color: #6b7280; font-weight: 600;">
-                        <i class="fas fa-exclamation-circle"></i> No more hints available
-                    </div>
-                `;
-            }
-        }
+<footer>
+  <p>Crafted with <span>♥</span> · Sami Abdoun © 2025 · Dubai, UAE</p>
+</footer>
 
-        // Update score display
-        function updateScoreDisplay() {
-            iqScoreDisplay.textContent = currentScore;
-            
-            const accuracy = (correctAnswers / (currentPuzzle + 1)) * 100;
-            let iqLevel = '';
-            
-            if (accuracy >= 90) iqLevel = 'Genius (140+)';
-            else if (accuracy >= 75) iqLevel = 'Superior (120-140)';
-            else if (accuracy >= 50) iqLevel = 'Above Average (110-120)';
-            else if (accuracy >= 25) iqLevel = 'Average (90-110)';
-            else iqLevel = 'Below Average (<90)';
-            
-            iqLevelDisplay.textContent = iqLevel;
-            
-            if (currentScore > highIQScore) {
-                highIQScore = currentScore;
-                iqHighScoreDisplay.textContent = highIQScore;
-                localStorage.setItem('iqHighScore', highIQScore);
-            }
-        }
+<script>
+// LOADER
+window.addEventListener('load',()=>{
+  setTimeout(()=>{
+    document.getElementById('loader').classList.add('hidden');
+  },2200);
+});
 
-        // End game
-        function endGame() {
-            const accuracy = (correctAnswers / totalPuzzles) * 100;
-            
-            setTimeout(() => {
-                feedbackContainer.innerHTML = `
-                    <div style="font-weight: 600; color: var(--primary-color); font-size: 1.1rem;">
-                        Game Complete!
-                    </div>
-                    <div style="color: var(--text-light); margin-top: 0.5rem;">
-                        Final Score: ${currentScore} | Accuracy: ${accuracy.toFixed(1)}%
-                    </div>
-                    <div style="margin-top: 0.75rem;">
-                        <button onclick="startNewGame()" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.9rem;">
-                            <i class="fas fa-play"></i> Play Again
-                        </button>
-                    </div>
-                `;
-            }, 1000);
-        }
+// CURSOR
+const dot=document.getElementById('cursor-dot');
+const ring=document.getElementById('cursor-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px';});
+(function animRing(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animRing);})();
 
-        // Start new game
-        function startNewGame() {
-            currentScore = 0;
-            currentPuzzle = 0;
-            correctAnswers = 0;
-            hintsUsed = 0;
-            generatePuzzles();
-            displayPuzzle(currentPuzzle);
-            updateScoreDisplay();
-        }
+// PARTICLE CANVAS
+const canvas=document.getElementById('particle-canvas');
+const ctx=canvas.getContext('2d');
+let W,H,particles=[];
+const COLORS=['#ff2d78','#00f5ff','#ffb800','#a855f7'];
+function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}
+resize();window.addEventListener('resize',()=>{resize();initParticles();});
+function Particle(){
+  this.x=Math.random()*W;this.y=Math.random()*H;
+  this.vx=(Math.random()-.5)*.4;this.vy=(Math.random()-.5)*.4;
+  this.r=Math.random()*1.5+.5;
+  this.color=COLORS[Math.floor(Math.random()*COLORS.length)];
+}
+function initParticles(){particles=[];for(let i=0;i<80;i++)particles.push(new Particle());}
+initParticles();
+function drawParticles(){
+  ctx.clearRect(0,0,W,H);
+  particles.forEach((p,i)=>{
+    p.x+=p.vx;p.y+=p.vy;
+    if(p.x<0||p.x>W)p.vx*=-1;
+    if(p.y<0||p.y>H)p.vy*=-1;
+    ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fillStyle=p.color;ctx.globalAlpha=.6;ctx.fill();
+    for(let j=i+1;j<particles.length;j++){
+      const d=Math.hypot(p.x-particles[j].x,p.y-particles[j].y);
+      if(d<120){
+        ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(particles[j].x,particles[j].y);
+        ctx.strokeStyle=p.color;ctx.globalAlpha=(1-d/120)*.15;ctx.lineWidth=.5;ctx.stroke();
+      }
+    }
+    ctx.globalAlpha=1;
+  });
+  requestAnimationFrame(drawParticles);
+}
+drawParticles();
 
-        // Initialize game
-        function initGame() {
-            generatePuzzles();
-            displayPuzzle(currentPuzzle);
-            updateScoreDisplay();
-        }
+// SCROLL REVEAL
+const reveals=document.querySelectorAll('.reveal');
+const observer=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');}});
+},{threshold:.15});
+reveals.forEach(r=>observer.observe(r));
 
-        // Event listeners
-        nextPuzzleBtn.addEventListener('click', () => {
-            currentPuzzle++;
-            displayPuzzle(currentPuzzle);
-        });
+// SKILL BARS
+const bars=document.querySelectorAll('.skill-bar-fill');
+const barObserver=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const pct=e.target.dataset.pct;
+      e.target.style.width=pct+'%';
+      setTimeout(()=>e.target.classList.add('done'),1300);
+      barObserver.unobserve(e.target);
+    }
+  });
+},{threshold:.3});
+bars.forEach(b=>barObserver.observe(b));
 
-        hintBtn.addEventListener('click', showHint);
-
-        resetGameBtn.addEventListener('click', startNewGame);
-
-        // Initialize the game
-        initGame();
-
-        // Expose for button onclick
-        window.startNewGame = startNewGame;
-    </script>
+// NAV TOGGLE
+function toggleNav(){
+  const nl=document.getElementById('navLinks');
+  nl.classList.toggle('open');
+}
+function closeNav(){
+  document.getElementById('navLinks').classList.remove('open');
+}
+</script>
 </body>
 </html>
-
-
-
-
